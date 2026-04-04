@@ -18,4 +18,18 @@ https://access.broadcom.com/default/ui/v1/signin/
 
 <img width="1905" height="661" alt="image" src="https://github.com/user-attachments/assets/dd7da9e2-e835-4a6c-a57b-1432c95d9903" />
 
+4. Finally, click Download.
 <img width="1888" height="740" alt="image" src="https://github.com/user-attachments/assets/d6f59218-3a83-4d56-a5b2-ed38f363b218" />
+
+5. Locate the installer file on the host machine.
+6. Right-click the installer and select **Run as administrator**.
+7. Wait for the setup wizard to open.
+8. Click **Next** to begin the installation.
+9. Accept the license agreement.
+10. Select the standard installation option.
+11. Continue with the default settings.
+12. Click **Install** to start the installation process.
+13. Wait for the installation to complete.
+14. Click **Finish** when the setup is done.
+15. Restart the host machine if required.
+16. Open VMware Workstation and confirm it starts correctly.
