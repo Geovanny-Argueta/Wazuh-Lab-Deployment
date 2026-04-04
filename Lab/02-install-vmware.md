@@ -10,8 +10,10 @@ VMware Workstation will be used to create and run the virtual machines required 
 Here is the link, but first you need to create an account in BROADCOM:
 https://access.broadcom.com/default/ui/v1/signin/
 
+2. Once you create the account and sign in, go to the following sections: enter My Downloads, then click the option Free Software Downloads Available HERE.
 <img width="1645" height="642" alt="image" src="https://github.com/user-attachments/assets/b7796b91-aea8-423a-b268-d08022915ce5" />
 
+3. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, and select a version that is not the newest one.
 <img width="1656" height="939" alt="image" src="https://github.com/user-attachments/assets/2a3e049c-9a56-4188-8e7b-d709c049ead4" />
 
 <img width="1905" height="661" alt="image" src="https://github.com/user-attachments/assets/dd7da9e2-e835-4a6c-a57b-1432c95d9903" />
