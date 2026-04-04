@@ -1,16 +1,14 @@
 # Wazuh-Lab-Deployment
 
-# Wazuh-Lab-Deployment
-
 ## Overview
 This repository documents the deployment of a Wazuh lab environment using VMware Workstation and Ubuntu Linux.
 
 The purpose of this project is to demonstrate practical skills in:
-- virtualization
+- Virtualization
 - SIEM deployment
 - Wazuh installation
-- agent onboarding
-- validation and troubleshooting
+- Agent onboarding
+- Validation and troubleshooting
 
 ## Project Objective
 The main goal of this lab is to build a functional Wazuh environment from scratch and document each phase in a clear and structured way.
