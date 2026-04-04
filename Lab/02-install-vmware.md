@@ -11,7 +11,7 @@ Here is the link, but first you need to create an account in BROADCOM:
 https://access.broadcom.com/default/ui/v1/signin/
 
 2. Once you create the account and sign in, go to the following sections: enter My Downloads, then click the option Free Software Downloads Available HERE.
-![Step_1](Images/Github-1.png)
+Images/Github-1.png
 
 3. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, and select a version that is not the newest one.
 <img width="1656" height="939" alt="image" src="https://github.com/user-attachments/assets/2a3e049c-9a56-4188-8e7b-d709c049ead4" />
