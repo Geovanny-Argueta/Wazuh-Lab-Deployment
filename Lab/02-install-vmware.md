@@ -1,0 +1,19 @@
+# Install VMware Workstation
+
+## Objective
+The objective of this step is to install VMware Workstation on the host machine to prepare the virtualization environment for the Wazuh lab.
+
+VMware Workstation will be used to create and run the virtual machines required for the project, starting with the Ubuntu server where Wazuh will be installed.
+
+## Installation Steps
+1. Download the VMware Workstation installer from the official website:
+Here is the link, but first you need to create an account in BROADCOM:
+https://access.broadcom.com/default/ui/v1/signin/
+
+<img width="1645" height="642" alt="image" src="https://github.com/user-attachments/assets/b7796b91-aea8-423a-b268-d08022915ce5" />
+
+<img width="1656" height="939" alt="image" src="https://github.com/user-attachments/assets/2a3e049c-9a56-4188-8e7b-d709c049ead4" />
+
+<img width="1905" height="661" alt="image" src="https://github.com/user-attachments/assets/dd7da9e2-e835-4a6c-a57b-1432c95d9903" />
+
+<img width="1888" height="740" alt="image" src="https://github.com/user-attachments/assets/d6f59218-3a83-4d56-a5b2-ed38f363b218" />
