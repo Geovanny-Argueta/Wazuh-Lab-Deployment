@@ -14,7 +14,7 @@ https://access.broadcom.com/default/ui/v1/signin/
 ![Step 2](../Docs/VMWare-1.png)
 
 3. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, and select a version that is not the newest one.
-<img width="1656" height="939" alt="image" src="https://github.com/user-attachments/assets/2a3e049c-9a56-4188-8e7b-d709c049ead4" />
+![Step_3](../Docs/VMWare-2.png)
 
 <img width="1905" height="661" alt="image" src="https://github.com/user-attachments/assets/dd7da9e2-e835-4a6c-a57b-1432c95d9903" />
 
