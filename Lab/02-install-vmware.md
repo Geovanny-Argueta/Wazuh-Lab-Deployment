@@ -13,10 +13,9 @@ https://access.broadcom.com/default/ui/v1/signin/
 2. Once you create the account and sign in, go to the following sections: enter My Downloads, then click the option Free Software Downloads Available HERE.
 ![Step 2](../Docs/VMWare-1.png)
 
-3. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, and select a version that is not the newest one.
+3. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, or if you use Linux, choose Linux,  and select a version that is not the newest one.
 ![Step_3](../Docs/VMWare-2.png)
-
-<img width="1905" height="661" alt="image" src="https://github.com/user-attachments/assets/dd7da9e2-e835-4a6c-a57b-1432c95d9903" />
+![Step_3.2](../Docs/VMWare-3.png)
 
 4. Finally, click Download.
 <img width="1888" height="740" alt="image" src="https://github.com/user-attachments/assets/d6f59218-3a83-4d56-a5b2-ed38f363b218" />
