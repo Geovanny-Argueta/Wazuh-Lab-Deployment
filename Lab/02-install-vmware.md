@@ -8,20 +8,20 @@ VMware Workstation will be used to create and run the virtual machines required 
 ## Installation Steps
 1. Download the VMware Workstation installer from the official website:
 Here is the link, but first you need to create an account in BROADCOM:
-https://access.broadcom.com/default/ui/v1/signin/
+https://support.broadcom.com/
 
-2. Once you create the account and sign in, go to the following sections: enter My Downloads, then click the option Free Software Downloads Available HERE.
+3. Once you create the account and sign in, go to the following sections: enter My Downloads, then click the option Free Software Downloads Available HERE.
 ![Step 2](../Docs/VMWare-1.png)
 
-3. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, or if you use Linux, choose Linux,  and select a version that is not the newest one.
+4. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, or if you use Linux, choose Linux,  and select a version that is not the newest one.
 ![Step_3](../Docs/VMWare-2.png)
 ![Step_3.2](../Docs/VMWare-3.png)
 
-4. Finally, click Download, If a form appears when you click download, just fill it out and click accept or save (I don’t remember exactly which one). After that, it will take you back to the same page, and you can simply click download again
+5. Finally, click Download, If a form appears when you click download, just fill it out and click accept or save (I don’t remember exactly which one). After that, it will take you back to the same page, and you can simply click download again
 ![Step_4](../Docs/VMWare-4.png)
 
-5. Locate the installer file on the host machine.
-6. Right-click the installer and select **Run as administrator**.
+6. Locate the installer file on the host machine.
+7. Right-click the installer and select **Run as administrator**.
 8. Click **Next** to begin the installation.
 9. Accept the license agreement.
 10. Select the option: **Add VMWare Wrokstation Console Tools into system PATH**
