@@ -18,7 +18,7 @@ https://access.broadcom.com/default/ui/v1/signin/
 ![Step_3.2](../Docs/VMWare-3.png)
 
 4. Finally, click Download.
-<img width="1888" height="740" alt="image" src="https://github.com/user-attachments/assets/d6f59218-3a83-4d56-a5b2-ed38f363b218" />
+![Step_4](../Docs/VMWare-4.png)
 
 5. Locate the installer file on the host machine.
 6. Right-click the installer and select **Run as administrator**.
