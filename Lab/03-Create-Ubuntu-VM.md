@@ -27,6 +27,7 @@ The layout may look slightly different depending on the VMware version you are u
 Select the option:
 **Typical (recommended)**
 Then click **Next**.
+
 ![step4](../Docs/Linux-2.png)
 
 ## 5. Select the ISO Image
