@@ -39,6 +39,7 @@ Then browse and choose the Ubuntu Server ISO file you downloaded earlier.
 ### 6. Name the Virtual Machine
 Assign a name to the virtual machine. For example:
 `Wazuh_Lab`
+
 ![step6](../Docs/Linux-4.png)
 
 ### 7. Configure Disk Size
@@ -49,6 +50,7 @@ For this lab, **80 GB is recommended** to have enough space for logs, packages, 
 
 Also, select the option:
 **Store virtual disk as a single file**
+
 ![step7](../Docs/Linux-8.png)
 
 ### 8. Configure Hardware Resources
@@ -71,6 +73,8 @@ To do this:
 
 - Right-click inside the VM window
 - Select **Shutdown**
+
+
 ![step10](../Docs/Linux-7.png)
 
 ### Summary
