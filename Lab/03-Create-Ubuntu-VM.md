@@ -65,7 +65,8 @@ For example, in this lab you can assign **10 GB of RAM** if your physical machin
 ### 9. Finish the Virtual Machine Creation
 Once everything is configured, click **Finish**.
 
-## 10. Power Off the Virtual Machine
+
+### 10. Power Off the Virtual Machine
 After clicking **Finish**, the virtual machine may start automatically.  
 Shut it down before continuing with the Ubuntu installation.
 
