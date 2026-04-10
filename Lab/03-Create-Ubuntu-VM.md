@@ -10,30 +10,24 @@ This virtual machine will be prepared in VMware Workstation and configured with 
 
 The first step is to install the operating system. For this lab, we will use **Ubuntu Server 22.04 LTS**, since it is a stable and compatible option for deploying **Wazuh All-in-One**, which includes the **Manager**, **Indexer**, and **Dashboard**.
 
-## 1. Download Ubuntu Server
-
+### 1. Download Ubuntu Server
 Go to the following link and download the Ubuntu Server ISO image:
-
 https://ubuntu.com/download/server
+[step1](../Docs/Linux-1.png)
 
-## 2. Create a New Virtual Machine
-
+### 2. Create a New Virtual Machine
 Open **VMware**, then go to:
-
 **File > New Virtual Machine**
 
-## 3. Initial Setup
-
+### 3. Initial Setup
 The virtual machine creation wizard will open.  
 The layout may look slightly different depending on the VMware version you are using, but the process is basically the same.
 
-## 4. Choose the Configuration Type
-
+### 4. Choose the Configuration Type
 Select the option:
-
 **Typical (recommended)**
-
 Then click **Next**.
+[step4](../Docs/Linux-2.png)
 
 ## 5. Select the ISO Image
 
