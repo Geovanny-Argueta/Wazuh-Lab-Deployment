@@ -13,7 +13,7 @@ The first step is to install the operating system. For this lab, we will use **U
 ### 1. Download Ubuntu Server
 Go to the following link and download the Ubuntu Server ISO image:
 https://ubuntu.com/download/server
-[step1](../Docs/Linux-1.png)
+![step1](../Docs/Linux-1.png)
 
 ### 2. Create a New Virtual Machine
 Open **VMware**, then go to:
@@ -27,7 +27,7 @@ The layout may look slightly different depending on the VMware version you are u
 Select the option:
 **Typical (recommended)**
 Then click **Next**.
-[step4](../Docs/Linux-2.png)
+![step4](../Docs/Linux-2.png)
 
 ## 5. Select the ISO Image
 
