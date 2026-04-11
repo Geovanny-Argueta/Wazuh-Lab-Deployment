@@ -63,20 +63,7 @@ For example, in this lab you can assign **10 GB of RAM** if your physical machin
 ![step8](../Docs/Linux-6.png)
 
 ### 9. Finish the Virtual Machine Creation
-Once everything is configured, click **Finish**.
-
-
-### 10. Power Off the Virtual Machine
-After clicking **Finish**, the virtual machine may start automatically.  
-Shut it down before continuing with the Ubuntu installation.
-
-To do this:
-
-- Right-click inside the VM window
-- Select **Shutdown**
-
-
-![step10](../Docs/Linux-7.png)
+Once everything is configured, click **Finish**, and the Vm will star.
 
 ### Summary
 At this point, the virtual machine is ready for the Ubuntu Server installation.
