@@ -152,6 +152,7 @@ Leave this section as default.
 
 - Select **Done**
 
+![step15](..//Docs/Ubuntu-15.png)
 ---
 
 ### 16. Installation Process
@@ -164,6 +165,7 @@ Once finished:
 - Select **Reboot Now**
 - Press **Enter** if prompted
 
+![step16](..//Docs/Ubuntu-16.png)
 ---
 
 ### 17. Login
@@ -173,6 +175,7 @@ After reboot:
 - Enter your **username**
 - Enter your **password**
 
+![step17](..//Docs/Ubuntu-17.png)
 ---
 
 ✅ Ubuntu Server is now successfully installed and ready for the next steps.
