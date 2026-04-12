@@ -19,6 +19,7 @@ For this lab, we will use:
 
 - **English**
 
+![step2](..//Docs/Ubuntu-2.png)
 ---
 
 ### 3. Installer Update
@@ -28,6 +29,7 @@ Since the VM has internet access, you will see an option to update the installer
 - Select: **Update to the new installer** (recommended)  
 - You can also skip this step without issues
 
+![step3](..//Docs/Ubuntu-3.png)
 ---
 
 ### 4. Keyboard Configuration
