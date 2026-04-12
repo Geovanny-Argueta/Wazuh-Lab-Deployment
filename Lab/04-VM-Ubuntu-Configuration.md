@@ -1,14 +1,14 @@
-## Ubuntu Server Installation (Inside the VM)
+## Ubuntu Server Installation in VMWare
 
 Follow these steps to install Ubuntu Server inside your virtual machine:
 
-
+---
 
 ### 1. Start Installation
 
 The VM will boot automatically.  
 Press **Enter** on **"Try or Install Ubuntu Server"** and wait.
-
+![step1](..//Docs/Ubuntu-1.png)
 ---
 
 ### 2. Select Language
