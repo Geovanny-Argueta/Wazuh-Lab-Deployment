@@ -1,18 +1,17 @@
-
-##  Ubuntu Server Installation (Inside the VM)
+## 🐧 Ubuntu Server Installation (Inside the VM)
 
 Follow these steps to install Ubuntu Server inside your virtual machine:
 
 ---
 
-## 1. Start Installation
+### 1. Start Installation
 
 The VM will boot automatically.  
 Press **Enter** on **"Try or Install Ubuntu Server"** and wait.
 
 ---
 
-## 2. Select Language
+### 2. Select Language
 
 Choose your preferred language.  
 For this lab, we will use:
@@ -21,7 +20,7 @@ For this lab, we will use:
 
 ---
 
-## 3. Installer Update
+### 3. Installer Update
 
 Since the VM has internet access, you will see an option to update the installer.
 
@@ -30,7 +29,7 @@ Since the VM has internet access, you will see an option to update the installer
 
 ---
 
-## 4. Keyboard Configuration
+### 4. Keyboard Configuration
 
 Select your keyboard layout.
 
@@ -38,7 +37,7 @@ Select your keyboard layout.
 
 ---
 
-## 5. Installation Type
+### 5. Installation Type
 
 Leave the default settings and select:
 
@@ -46,7 +45,7 @@ Leave the default settings and select:
 
 ---
 
-## 6. Network Configuration
+### 6. Network Configuration
 
 Leave the default network configuration.
 
@@ -56,7 +55,7 @@ Select **Done**.
 
 ---
 
-## 7. Proxy Configuration
+### 7. Proxy Configuration
 
 Do not configure any proxy.
 
@@ -65,7 +64,7 @@ Do not configure any proxy.
 
 ---
 
-## 8. Mirror Configuration
+### 8. Mirror Configuration
 
 Wait for the mirror test to complete.
 
@@ -73,7 +72,7 @@ Wait for the mirror test to complete.
 
 ---
 
-## 9. Storage Configuration (Step 1)
+### 9. Storage Configuration (Step 1)
 
 Leave the default configuration:
 
@@ -85,7 +84,7 @@ Select **Done**.
 
 ---
 
-## 10. Storage Configuration (Step 2)
+### 10. Storage Configuration (Step 2)
 
 No changes are required.
 
@@ -93,7 +92,7 @@ No changes are required.
 
 ---
 
-## 11. Confirm Changes
+### 11. Confirm Changes
 
 You will be asked to confirm disk changes.
 
@@ -101,7 +100,7 @@ You will be asked to confirm disk changes.
 
 ---
 
-## 12. User Setup
+### 12. User Setup
 
 Configure the following:
 
@@ -113,7 +112,7 @@ Then select **Done**.
 
 ---
 
-## 13. Ubuntu Pro
+### 13. Ubuntu Pro
 
 Skip this step.
 
@@ -122,7 +121,7 @@ Skip this step.
 
 ---
 
-## 14. OpenSSH Setup
+### 14. OpenSSH Setup
 
 Enable SSH access:
 
@@ -133,7 +132,7 @@ This is important for remote access to your lab.
 
 ---
 
-## 15. Featured Server Snaps
+### 15. Featured Server Snaps
 
 Leave this section as default.
 
@@ -141,7 +140,7 @@ Leave this section as default.
 
 ---
 
-## 16. Installation Process
+### 16. Installation Process
 
 Wait for the installation to complete.  
 This may take several minutes.
@@ -153,7 +152,7 @@ Once finished:
 
 ---
 
-## 17. Login
+### 17. Login
 
 After reboot:
 
