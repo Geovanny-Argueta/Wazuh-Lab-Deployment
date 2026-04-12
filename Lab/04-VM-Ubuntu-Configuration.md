@@ -38,6 +38,7 @@ Select your keyboard layout.
 
 - Recommended: **English (US)**
 
+![step4](..//Docs/Ubuntu-4.png)
 ---
 
 ### 5. Installation Type
@@ -46,6 +47,7 @@ Leave the default settings and select:
 
 - **Done**
 
+![step5](..//Docs/Ubuntu-5.png)
 ---
 
 ### 6. Network Configuration
@@ -56,6 +58,7 @@ Leave the default network configuration.
 
 Select **Done**.
 
+![step6](..//Docs/Ubuntu-6.png)
 ---
 
 ### 7. Proxy Configuration
