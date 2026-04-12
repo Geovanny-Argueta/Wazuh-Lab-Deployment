@@ -68,6 +68,7 @@ Do not configure any proxy.
 - Leave it empty
 - Select **Done**
 
+![step7](..//Docs/Ubuntu-7.png)
 ---
 
 ### 8. Mirror Configuration
@@ -76,6 +77,7 @@ Wait for the mirror test to complete.
 
 - Once finished, select **Done**
 
+![step8](..//Docs/Ubuntu-8.png)
 ---
 
 ### 9. Storage Configuration (Step 1)
@@ -88,6 +90,7 @@ Leave the default configuration:
 
 Select **Done**.
 
+![setp9](..//Docs/Ubuntu-9.png)
 ---
 
 ### 10. Storage Configuration (Step 2)
@@ -96,6 +99,7 @@ No changes are required.
 
 - Select **Done**
 
+![step10](..//Docs/Ubuntu-10.png)
 ---
 
 ### 11. Confirm Changes
@@ -104,6 +108,7 @@ You will be asked to confirm disk changes.
 
 - Select **Continue**
 
+![step11](..//Docs/Ubuntu-11.png)
 ---
 
 ### 12. User Setup
@@ -116,6 +121,7 @@ Configure the following:
 
 Then select **Done**.
 
+![step12](..//Docs/Ubuntu-12.png)
 ---
 
 ### 13. Ubuntu Pro
@@ -125,6 +131,7 @@ Skip this step.
 - Leave it as default
 - Select **Continue**
 
+![step13](..//Docs/Ubuntu-13.png)
 ---
 
 ### 14. OpenSSH Setup
@@ -136,6 +143,7 @@ Enable SSH access:
 
 This is important for remote access to your lab.
 
+![step14](..//Docs/Ubuntu-14.png)
 ---
 
 ### 15. Featured Server Snaps
