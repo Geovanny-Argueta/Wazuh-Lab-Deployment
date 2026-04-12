@@ -1,8 +1,8 @@
-## 🐧 Ubuntu Server Installation (Inside the VM)
+## Ubuntu Server Installation (Inside the VM)
 
 Follow these steps to install Ubuntu Server inside your virtual machine:
 
----
+
 
 ### 1. Start Installation
 
