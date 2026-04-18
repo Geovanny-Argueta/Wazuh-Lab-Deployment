@@ -6,7 +6,7 @@ In this section, I will prepare the virtual network layout for the Wazuh lab in 
 
 First, open VMware Workstation, click **Edit**, and then select **Virtual Network Editor**.
 
-![step1](Docs/Configuration-before-install-wazuh/step-1.png)
+![step1](../Docs/Configuration-before-install-wazuh/step-1.png)
 
 ## Step 2 - Enable Administrative Changes
 
