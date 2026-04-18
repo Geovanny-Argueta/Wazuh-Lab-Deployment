@@ -56,13 +56,19 @@ In the network settings, select **Custom: Specific virtual network**, choose **V
 
 ![step9](../Docs/Configuration-before-install-wazuh/step-9.png)
 
-### Step 10 - Assign the Second Adapter to VMnet2
+
+### Step 10 - Add a Second Network Adapter
+
+Go back again to **Edit virtual machine settings**, click **Add**, select **Network Adapter**, and then click **Finish**.
+
+
+### Step 11 - Assign the Second Adapter to VMnet2
 
 Open the new **Network Adapter 2**, select **Custom: Specific virtual network**, choose **VMnet2 (Host-Only)**, and click **OK**. This second adapter will be used for the internal lab communication.
 
 ![setp11](../Docs/Configuration-before-install-wazuh/step-11.png)
 
-### Step 11 - Power On the Wazuh VM and Update the System
+### Step 12 - Power On the Wazuh VM and Update the System
 
 Finally, power on the Wazuh VM, sign in with your credentials, and run the following command to update the Ubuntu system packages. Since the command uses `sudo`, the system will ask for your password. Then just wait for the update process to finish.
 
