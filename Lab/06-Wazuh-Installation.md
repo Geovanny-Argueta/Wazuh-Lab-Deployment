@@ -58,7 +58,7 @@ curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-i
 
 This process may take several minutes because Wazuh will install the **Indexer**, **Dashboard**, and **Manager** on the same server.
 
-![paso5](../)
+![paso5](../Docs/Wazuh-Instalation/step-4.png)
 
 ### Step 6 - Save the Dashboard credentials
 
@@ -66,7 +66,7 @@ When the installation finishes, Wazuh will display a summary with the web access
 
 This final output also confirms that the installation was completed successfully.
 
-![paso6](../)
+![paso6](../Docs/Wazuh-Instalation/step-5.png)
 
 ### Step 7 - Verify that all Wazuh services are running
 
@@ -94,7 +94,7 @@ systemctl start wazuh-indexer
 systemctl start wazuh-manager
 ~~~
 
-![paso7](../)
+![paso7](../Docs/Wazuh-Instalation/step-7.png)
 
 ### Step 8 - Open the Wazuh web interface
 
@@ -104,13 +104,13 @@ After confirming that all services are running, open your preferred browser on y
 
 Because this is a lab environment and Wazuh uses a self-signed certificate by default, the browser will likely show a security warning. Click **Advanced** and then continue to the site.
 
-![paso8](../)
+![paso8](../Docs/Wazuh-Instalation/step-8.png)
 
 ### Step 9 - Open the login page
 
 After bypassing the browser warning, the Wazuh login page should appear. This means the Dashboard is reachable and ready to use.
 
-![paso9](../)
+![paso9](../Docs/Wazuh-Instalation/step-9.png)
 
 ### Step 10 - Recover the credentials if needed
 
@@ -125,8 +125,8 @@ This command shows all the credentials created during the installation. For the 
 `Admin user for the web user interface and Wazuh indexer`
 
 That is the account used to sign in to the Wazuh Dashboard.
-
-![paso10](../)
+![step10.1](../Docs/Wazuh-Instalation/step-10.2.png)
+![paso10](../Docs/Wazuh-Instalation/step-10.png)
 
 ### Step 11 - Log in to the Wazuh Dashboard
 
@@ -150,4 +150,4 @@ systemctl start wazuh-manager
 
 You can run these commands either with `sudo` or while already logged in as `root`.
 
-![paso11](../)
+![paso11](../Docs/Wazuh-Instalation/step-11.png)
