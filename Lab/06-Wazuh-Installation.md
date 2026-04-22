@@ -7,10 +7,8 @@ Wazuh is an open-source security platform used to collect logs, detect suspiciou
 ### Step 1 - Open the Wazuh Quick Start page
 
 First, open the official Wazuh Quick Start page. This is the guide I will use to install Wazuh in the lab:
+https://documentation.wazuh.com/current/quickstart.html
 
-`https://documentation.wazuh.com/current/quickstart.html`
-
-![paso1](../)
 
 ### Step 2 - Power on the VM and identify its IP address
 
@@ -22,7 +20,7 @@ ip addr
 
 In my case, the IP address of the Wazuh VM is `192.168.10.128`.
 
-![paso2](../)
+![paso2](../Docs/Wazuh-Instalation/step-1.png)
 
 ### Step 3 - Connect to the Wazuh VM through SSH
 
@@ -36,7 +34,7 @@ The first time you connect, SSH will ask if you want to trust the host. Type `ye
 
 I prefer using SSH here because it makes it much easier to copy and paste the installation commands from the Wazuh documentation into the server.
 
-![paso3](../)
+![paso3](../Docs/Wazuh-Instalation/step-2.png)
 
 ### Step 4 - Switch to the root user
 
@@ -48,7 +46,7 @@ sudo su
 
 Then enter the password of the Wazuh VM user.
 
-![paso4](../)
+![paso4](../Docs/Wazuh-Instalation/step-3.png)
 
 ### Step 5 - Run the Wazuh installation command
 
