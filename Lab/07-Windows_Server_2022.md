@@ -16,7 +16,6 @@ Download link:
 https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022
 
 Select the **ISO download** option and choose the **64-bit edition**.
-
 ![step1](..//Docs/Install_Windows_Server/step-1.png)
 
 ---
@@ -31,11 +30,11 @@ Then go to:
 
 This will start the wizard to create a new virtual machine.
 
-![step2](..//Install_Windows_Server/step-2.png)
+![step2](..//Docs/Install_Windows_Server/step-2.png)
 
 ---
 
-## Step 3: Start the Virtual Machine Wizard
+### Step 3: Start the Virtual Machine Wizard
 
 Select the option:
 
@@ -44,8 +43,6 @@ Select the option:
 This option is enough for this lab because we do not need advanced custom hardware settings at this stage.
 
 Then click **Next**.
-
-![step3](../images/step-3.png)
 
 ---
 
@@ -59,7 +56,7 @@ This allows us to manually attach the Windows Server ISO after creating the virt
 
 Then click **Next**.
 
-![step4](../images/step-4.png)
+![step4](..//Docs/Install_Windows_Server/step-3.png)
 
 ---
 
