@@ -1,4 +1,4 @@
-### Installing Windows Server 2022 as the First Wazuh Agent
+## Installing Windows Server 2022 as the First Wazuh Agent
 
 In this section, we will create and install a Windows Server 2022 virtual machine in VMware Workstation.  
 This server will be used later as our first Windows endpoint with the Wazuh Agent installed.
@@ -7,7 +7,7 @@ The goal is to simulate a small corporate environment where Wazuh can collect Wi
 
 ---
 
-## Step 1: Download the Windows Server 2022 ISO
+### Step 1: Download the Windows Server 2022 ISO
 
 First, download the Windows Server 2022 ISO image from the official Microsoft Evaluation Center.
 
@@ -17,11 +17,11 @@ https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022
 
 Select the **ISO download** option and choose the **64-bit edition**.
 
-![step1](../images/step-1.png)
+![step1](..//Docs/Install_Windows_Server/step-1.png)
 
 ---
 
-## Step 2: Open VMware Workstation
+### Step 2: Open VMware Workstation
 
 Open **VMware Workstation**.
 
@@ -31,7 +31,7 @@ Then go to:
 
 This will start the wizard to create a new virtual machine.
 
-![step2](../images/step-2.png)
+![step2](..//Install_Windows_Server/step-2.png)
 
 ---
 
