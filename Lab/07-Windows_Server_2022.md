@@ -8,54 +8,36 @@ The goal is to simulate a small corporate environment where Wazuh can collect Wi
 ---
 
 ### Step 1: Download the Windows Server 2022 ISO
-
 First, download the Windows Server 2022 ISO image from the official Microsoft Evaluation Center.
-
 Download link:
-
 https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022
-
 Select the **ISO download** option and choose the **64-bit edition**.
 ![step1](..//Docs/Install_Windows_Server/step-1.png)
 
 ---
 
 ### Step 2: Open VMware Workstation
-
 Open **VMware Workstation**.
-
 Then go to:
-
 **File > New Virtual Machine**
-
 This will start the wizard to create a new virtual machine.
-
 ![step2](..//Docs/Install_Windows_Server/step-2.png)
 
 ---
 
 ### Step 3: Start the Virtual Machine Wizard
-
 Select the option:
-
 **Typical (recommended)**
-
 This option is enough for this lab because we do not need advanced custom hardware settings at this stage.
-
 Then click **Next**.
 
 ---
 
-## Step 4: Select “I will install the operating system later”
-
+### Step 4: Select “I will install the operating system later”
 In this step, select:
-
 **I will install the operating system later**
-
 This allows us to manually attach the Windows Server ISO after creating the virtual machine.
-
 Then click **Next**.
-
 ![step4](..//Docs/Install_Windows_Server/step-3.png)
 
 ---
