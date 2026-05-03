@@ -71,6 +71,8 @@ Then click **Next**.
 For this lab, we will configure the virtual disk with:
 - **Disk size:** 80 GB
 - **Disk type:** Store virtual disk as a single file
+
+
 ![step7](..//Docs/Install_Windows_Server/step-7.png)
 
 Recommended resources for Windows Server 2022 in this lab:
