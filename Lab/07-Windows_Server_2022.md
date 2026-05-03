@@ -43,7 +43,7 @@ Then click **Next**.
 
 ---
 
-## Step 5: Select the Guest Operating System
+### Step 5: Select the Guest Operating System
 
 Select the following options:
 - **Guest operating system:** Microsoft Windows
@@ -55,7 +55,7 @@ Then click **Next**.
 
 ---
 
-## Step 6: Name the Virtual Machine
+### Step 6: Name the Virtual Machine
 
 Assign a name to the virtual machine.
 In this lab, the VM will be named:
