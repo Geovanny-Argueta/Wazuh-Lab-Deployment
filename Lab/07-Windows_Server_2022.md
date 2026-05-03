@@ -67,15 +67,13 @@ Then click **Next**.
 
 ---
 
-## Step 7: Configure the Virtual Disk
-
+### Step 7: Configure the Virtual Disk
 For this lab, we will configure the virtual disk with:
-
 - **Disk size:** 80 GB
 - **Disk type:** Store virtual disk as a single file
+![step7](..//Docs/Install_Windows_Server/step-7.png)
 
 Recommended resources for Windows Server 2022 in this lab:
-
 | Resource | Recommended |
 |---|---|
 | CPU | 2 vCPU |
@@ -83,7 +81,6 @@ Recommended resources for Windows Server 2022 in this lab:
 | Disk | 80 GB |
 
 Minimum resources:
-
 | Resource | Minimum |
 |---|---|
 | CPU | 1 vCPU |
@@ -91,17 +88,15 @@ Minimum resources:
 | Disk | 60 GB |
 
 In this lab, I will use:
-
 - **CPU:** 2 vCPU
 - **RAM:** 8 GB
 - **Disk:** 80 GB
 
+![step7](..//Docs/Install_Windows_Server/step-7-2.png)
+
 Important note:  
 Select **Store virtual disk as a single file** to keep the virtual disk in one file. This is useful for lab environments and can help with disk performance.
-
 Then click **Next**.
-
-![step7](../images/step-7.png)
 
 ---
 
