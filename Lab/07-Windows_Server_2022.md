@@ -46,31 +46,24 @@ Then click **Next**.
 ## Step 5: Select the Guest Operating System
 
 Select the following options:
-
 - **Guest operating system:** Microsoft Windows
 - **Version:** Windows Server 2022
-
 This helps VMware apply the correct default settings for the virtual machine.
-
 Then click **Next**.
 
-![step5](../images/step-5.png)
+![step5](..//Docs/Install_Windows_Server/step-5.png)
 
 ---
 
 ## Step 6: Name the Virtual Machine
 
 Assign a name to the virtual machine.
-
 In this lab, the VM will be named:
-
 **Windows_Server_Lab**
-
 You can also choose the location where the virtual machine files will be stored.
-
 Then click **Next**.
 
-![step6](../images/step-6.png)
+![step6](..//Docs/Install_Windows_Server/step-6.png)
 
 ---
 
