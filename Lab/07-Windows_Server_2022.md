@@ -38,6 +38,7 @@ In this step, select:
 **I will install the operating system later**
 This allows us to manually attach the Windows Server ISO after creating the virtual machine.
 Then click **Next**.
+
 ![step4](..//Docs/Install_Windows_Server/step-3.png)
 
 ---
