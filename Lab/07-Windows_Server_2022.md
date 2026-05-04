@@ -194,7 +194,8 @@ Select the option:
 **Custom: Install Microsoft Server Operating System only (advanced)**
 This option performs a clean installation of Windows Server.
 
-Then click **Next**.
+Then click **Next**
+
 ![step15](..//Docs/Install_Windows_Server/step-13.png)
 
 ---
@@ -221,6 +222,7 @@ The installation process includes:
 - Finishing the installation
 
 This process may take several minutes.
+
 ![step17](..//Docs/Install_Windows_Server/step-15.png)
 
 ---
@@ -245,8 +247,8 @@ To log in to Windows Server, you need to send the following key combination:
 
 In VMware Workstation, right-click the virtual machine and select:
 **Send Ctrl + Alt + Del**
-
 After that, enter the Administrator password.
+
 ![step19](..//Docs/Install_Windows_Server/step-17.png)
 
 ---
@@ -269,8 +271,8 @@ In this lab, the VM is connected to a custom VMware network adapter.
 
 Important note:  
 Use the same network segment where the Wazuh Manager can communicate with this Windows Server. This will be required later when installing and registering the Wazuh Agent.
-
 Then click **OK**.
+
 ![step21](..//Docs/Install_Windows_Server/step-19nota.png)
 
 ---
