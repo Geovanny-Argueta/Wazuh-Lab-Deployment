@@ -234,7 +234,7 @@ When Windows Server starts for the first time, it will ask you to create a passw
 Enter a secure password and click **Finish**.
 
 Important note:  
-The default username is:**Administrator**
+The default username is: **Administrator**
 
 ![step18](..//Docs/Install_Windows_Server/step-16.png)
 
