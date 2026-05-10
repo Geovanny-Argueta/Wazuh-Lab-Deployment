@@ -1,23 +1,12 @@
-### Installing the Wazuh Agent on Windows Server 2022
+## Installing the Wazuh Agent on Windows Server 2022
 
-In this section, we will install the Wazuh Agent on a Windows Server 2022 virtual machine.
-
-The goal is to connect the Windows Server endpoint to the Wazuh Manager so Wazuh can start collecting Windows security events, authentication logs, system logs, and endpoint activity.
-
-Before installing the agent, we will validate that the main Wazuh components are running correctly:
-
-- Wazuh Manager
-- Wazuh Indexer
-- Wazuh Dashboard
+In this section, we will install the Wazuh Agent on a Windows Server 2022 virtual machine, the goal is to connect the Windows Server endpoint to the Wazuh Manager so Wazuh can start collecting Windows security events, authentication logs, system logs, and endpoint activity.
 
 ---
 
-## Step 1: Validate the Wazuh Services
+### Step 1: Validate the Wazuh Services
 
-First, power on the Wazuh VM.
-
-Then connect to the Wazuh server using SSH. In my case, I access the server from CMD or a terminal using SSH.
-
+First, power on the Wazuh VM, then connect to the Wazuh server using SSH. In my case, I access the server from CMD or a terminal using SSH.
 Once connected, switch to the root user:
 
 ```bash
@@ -31,6 +20,7 @@ systemctl status wazuh-dashboard
 systemctl status wazuh-indexer
 systemctl status wazuh-manager
 ```
+![step1](../Docs/Wazuh-Agent/step-1.png)
 
 All services should show the following status:
 
@@ -54,106 +44,62 @@ systemctl start wazuh-indexer
 systemctl start wazuh-manager
 ```
 
-![step1](../images/step-1.png)
-
 ---
 
-## Step 2: Access the Wazuh Dashboard
+### Step 2: Access the Wazuh Dashboard
 
-After validating that the Wazuh services are running, open a web browser and access the Wazuh Dashboard using the IP address of the Wazuh VM.
-
-Example:
-
-```text
-https://<WAZUH_SERVER_IP>
-```
-
-In this lab, the Wazuh Dashboard is already accessible and working correctly.
-
+After validating that the Wazuh services are running, open a web browser and access the Wazuh Dashboard using the IP address of the Wazuh VM, in this lab, the Wazuh Dashboard is already accessible and working correctly.
 At this point, also power on the Windows Server 2022 VM because we will install the Wazuh Agent on that endpoint.
 
-![step2](../images/step-2.png)
+![step2](../Docs/Wazuh-Agent/step-2.png)
 
 ---
 
-## Step 3: Choose the Wazuh Agent Installation Method
+### Step 3: Choose the Wazuh Agent Installation Method
 
 There are two common ways to install the Wazuh Agent on Windows Server:
 
 - **CLI installation:** Using PowerShell commands.
 - **GUI installation:** Using the Windows installer manually.
 
-In this lab, we will use the **CLI installation** method because it is faster, cleaner, and easier to document.
-
-Official Wazuh documentation:
-
-```text
+In this lab, we will use the **CLI installation** method because it is faster, cleaner, and easier to document, I will share with you the Official Wazuh documentation:
 https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html
-```
-
-![step3](../images/step-3.png)
 
 ---
 
-## Step 4: Open the Agents Management Section
+### Step 4: Open the Agents Management Section
 
-Inside the Wazuh Dashboard, click the menu icon in the upper-left corner.
-
-Then go to:
-
-```text
-Agents management > Summary
-```
-
+Inside the Wazuh Dashboard, click the menu icon in the upper-left corner, then go to: **gents management > Summary**
 This section allows us to deploy new agents and verify the endpoints connected to the Wazuh Manager.
 
-![step4](../images/step-4.png)
+![step4](../Docs/Wazuh-Agent/step-4.png)
 
 ---
 
-## Step 5: Deploy a New Agent
+### Step 5: Deploy a New Agent
 
-Inside the **Agents management** section, click:
+Inside the **Agents management** section, click: **Deploy new agent**, this option opens the deployment wizard, where Wazuh generates the installation command for the endpoint.
 
-```text
-Deploy new agent
-```
-
-This option opens the deployment wizard, where Wazuh generates the installation command for the endpoint.
-
-![step5](../images/step-5.1.png)
+![step5](../Docs/Wazuh-Agent/step-5.png)
 
 ---
 
-## Step 6: Select the Windows Agent Package
+### Step 6: Select the Windows Agent Package
 
-In the deployment wizard, select the Windows package:
-
-```text
-Windows - MSI 32/64 bits
-```
-
+In the deployment wizard, select the Windows package: **Windows - MSI 32/64 bits**
 Then configure the following values:
-
-```text
-Server address: 192.168.10.128
-Agent name: Windows-Server-2022
-Group: Default
-```
+- Server address: 192.168.10.128
+- Agent name: Windows-Server-2022
+- Group: Default
 
 Explanation:
-
 - **Server address:** This is the IP address of the Wazuh Manager.
 - **Agent name:** This is the name that will appear in the Wazuh Dashboard.
 - **Group:** This is the Wazuh group where the agent will be assigned.
 
-In this lab, the Windows Server agent will be registered as:
+In this lab, the Windows Server agent will be registered as: **Windows-Server-2022**
 
-```text
-Windows-Server-2022
-```
-
-![step6](../images/step-5.png)
+![step6](../Docs/Wazuh-Agent/step-5.1.png)
 
 ---
 
