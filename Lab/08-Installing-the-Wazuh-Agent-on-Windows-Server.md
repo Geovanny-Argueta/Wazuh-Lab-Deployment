@@ -151,12 +151,7 @@ This confirms that the Windows Server is successfully connected to the Wazuh Man
 
 ## Final Result
 
-At this point, the Wazuh Agent has been successfully installed on Windows Server 2022.
-
-The Windows Server endpoint is now connected to the Wazuh Manager and visible in the Wazuh Dashboard.
-
-Wazuh can now start collecting security data from the Windows endpoint, such as:
-
+At this point, the Wazuh Agent has been successfully installed on Windows Server 2022, the Windows Server endpoint is now connected to the Wazuh Manager and visible in the Wazuh Dashboard, wazuh can now start collecting security data from the Windows endpoint, such as:
 - Windows login events
 - Authentication activity
 - System events
@@ -164,4 +159,3 @@ Wazuh can now start collecting security data from the Windows endpoint, such as:
 - Agent status
 - Endpoint monitoring data
 
-The next step will be to validate Windows log collection and review security events inside the Wazuh Dashboard.
