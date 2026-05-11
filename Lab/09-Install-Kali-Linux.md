@@ -47,17 +47,15 @@ Now browse to the folder where you extracted and saved the Kali Linux VM, select
 
 ---
 
-## Step 5: Rename the Virtual Machine in VMware
+### Step 5: Rename the Virtual Machine in VMware
 
-After opening the Kali Linux VM, it should now appear in VMware Workstation, to keep the lab organized, click on the VM name and rename it to: **Kali Linux**
+After opening the Kali Linux VM, it should now appear in VMware Workstation, to keep the lab organized, click on the VM name and rename it to: **Kali Linux**, this makes it easier to identify the machine later, especially when working with multiple virtual machines in the Wazuh lab.
 
-This makes it easier to identify the machine later, especially when working with multiple virtual machines in the Wazuh lab.
-
-![step5](../)
+![step5](../Docs/Install-Kali-Linux/step-6.png)
 
 ---
 
-## Step 6: Review the Virtual Machine Hardware Settings
+### Step 6: Review the Virtual Machine Hardware Settings
 
 Before starting the VM, you can review the hardware settings if needed.
 
@@ -74,26 +72,18 @@ In this lab, I will leave the default hardware settings because the Kali Linux V
 
 ---
 
-## Step 7: Power On the Kali Linux Virtual Machine
+### Step 7: Power On the Kali Linux Virtual Machine
 
-Now power on the Kali Linux virtual machine.
-
-Wait until the system finishes booting.  
-Do not press **Enter** or click anything during the boot process. Just wait until the login screen appears.
+Now power on the Kali Linux virtual machine, wait until the system finishes booting, do not press **Enter** or click anything during the boot process. Just wait until the login screen appears.
 
 Once the login screen is displayed, use the default Kali Linux credentials:
-
-- **Username:** `kali`
-- **Password:** `kali`
+- **Username:** : **kali**
+- **Password:** : **kali**
 
 After logging in, the Kali Linux VM will be ready to use in the lab environment.
-
-![step7](../)
 
 ---
 
 ## Final Result
 
-At this point, the Kali Linux virtual machine has been successfully downloaded, imported into VMware Workstation, renamed, and started for the first time.
-
-This VM is now ready to be used for cybersecurity testing, security tools, Wazuh log generation, and future lab exercises.
+At this point, the Kali Linux virtual machine has been successfully downloaded, imported into VMware Workstation, renamed, and started for the first time, this VM is now ready to be used for cybersecurity testing, security tools, Wazuh log generation, and future lab exercises.
