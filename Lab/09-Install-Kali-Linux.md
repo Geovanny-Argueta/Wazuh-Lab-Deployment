@@ -57,18 +57,13 @@ After opening the Kali Linux VM, it should now appear in VMware Workstation, to 
 
 ### Step 6: Review the Virtual Machine Hardware Settings
 
-Before starting the VM, you can review the hardware settings if needed.
-
-For example, you can adjust:
-
+Before starting the VM, you can review the hardware settings if needed, for example, you can adjust:
 - RAM
 - CPU
 - Disk settings
 - Network adapter
-
 In this lab, I will leave the default hardware settings because the Kali Linux VMware image already works well with the recommended configuration.
 
-![step6](../)
 
 ---
 
