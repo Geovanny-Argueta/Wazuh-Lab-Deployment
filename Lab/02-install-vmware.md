@@ -35,12 +35,12 @@ https://support.broadcom.com/
 
 ---
 
-<table>
+<table width="100%">
   <tr>
-    <td align="left">
+    <td align="left" width="50%">
       ⬅️ <a href="01-Lab_Overview.md">Previous Step: Lab Overview</a>
     </td>
-    <td align="right">
+    <td align="right" width="50%">
       <a href="03-Create-Ubuntu-VM.md">Next Step: Create Ubuntu Virtual Machine</a> ➡️
     </td>
   </tr>
