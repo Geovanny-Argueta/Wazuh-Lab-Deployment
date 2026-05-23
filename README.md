@@ -1,61 +1,39 @@
-# Wazuh-Lab-Deployment
+# Wazuh Lab Deployment
 
 ## Overview
-This repository documents the deployment of a Wazuh lab environment using VMware Workstation and Ubuntu Linux.
 
-The purpose of this project is to demonstrate practical skills in:
-- Virtualization
-- SIEM deployment
-- Wazuh installation
-- Agent onboarding
-- Validation and troubleshooting
+This repository documents my personal Wazuh cybersecurity lab built with VMware Workstation, the lab is designed to simulate a small SOC environment where Wazuh is used as a SIEM to collect, monitor, and analyze security events from different virtual machines.
+
+## Lab Environment
+
+The current lab includes:
+
+- **Wazuh Server:** Ubuntu Server
+- **Windows Server:** Monitored endpoint with Wazuh Agent
+- **Kali Linux:** Attack and testing machine
+- **Virtualization:** VMware Workstation
 
 ## Project Objective
-The main goal of this lab is to build a functional Wazuh environment from scratch and document each phase in a clear and structured way.
 
-This repository is part of my cybersecurity portfolio and is intended to showcase hands-on experience in security monitoring, lab preparation, and system deployment.
+The main goal of this project is to build a practical cybersecurity lab for learning and documenting real detection use cases.
 
-## Lab Architecture
-- **Host machine:** Windows
-- **Virtualization platform:** VMware Workstation
-- **Wazuh server OS:** Ubuntu Linux
-- **SIEM platform:** Wazuh
-- **Monitored endpoints:** Windows and Linux agents
+This lab will be used to practice:
 
-## Technologies Used
-- VMware Workstation
-- Ubuntu Linux
-- Wazuh
-- Windows
-- Linux
+- Wazuh deployment
+- Agent onboarding
+- Windows and Linux log monitoring
+- SIEM use case development
+- Security event detection and analysis
+- Attack simulation for detection validation
+- SOC investigation workflows
+- Future Kali Linux and Pentesting scenarios
 
-## Repository Structure
-- `docs/` Step-by-step deployment guides
-- `images/` Screenshots and technical evidence
-- `scripts/` Supporting scripts used in the lab
+## Start the Lab
 
-## Deployment Phases
-1. Install VMware Workstation
-2. Create the Ubuntu virtual machine
-3. Install Wazuh
-4. Access and validate the Wazuh dashboard
-5. Install and register agents
-6. Verify events and alerts
-7. Document troubleshooting steps
+To begin with the lab documentation, go to:
 
-## Validation Goals
-At the end of this lab, the environment should be able to:
-- run Wazuh successfully
-- allow access to the dashboard
-- register agents correctly
-- receive logs and security events
-- support basic monitoring validation
+[Start Lab - Lab Overview](Lab/01-Lab_Overview.md)
 
-## Evidence
-This repository includes screenshots and documentation for each phase of the deployment process.
-
-## Status
-In progress
 
 ## Author
 Geovanny Argueta  
