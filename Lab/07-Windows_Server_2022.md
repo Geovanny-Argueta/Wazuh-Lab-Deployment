@@ -280,3 +280,15 @@ Then click **OK**.
 ## Final Result
 
 At this point, the Windows Server 2022 virtual machine has been successfully installed in VMware Workstation, this VM will be used as the first Windows endpoint in the Wazuh lab.  
+
+---
+
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="06-Wazuh-Installation.md">⬅️ Previous Step: Install Wazuh All-in-One</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="08-Installing-the-Wazuh-Agent-on-Windows-Server.md">Next Step: Install Wazuh Agent on Windows Server ➡️</a>
+</p>
