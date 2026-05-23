@@ -35,13 +35,16 @@ https://support.broadcom.com/
 
 ---
 
-<table width="100%">
+<table>
   <tr>
-    <td align="left" width="50%">
-      ⬅️ <a href="01-Lab_Overview.md">Previous Step: Lab Overview</a>
+    <td align="left">
+      <a href="01-Lab_Overview.md">⬅️ Previous Step: Lab Overview</a>
     </td>
-    <td align="right" width="50%">
-      <a href="03-Create-Ubuntu-VM.md">Next Step: Create Ubuntu Virtual Machine</a> ➡️
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="right">
+      <a href="03-Create-Ubuntu-VM.md">Next Step: Create Ubuntu Virtual Machine ➡️</a>
     </td>
   </tr>
 </table>
