@@ -1,50 +1,85 @@
 # Lab Overview
 
 ## Objective
-The objective of this lab is to deploy a functional Wazuh environment in a virtualized setup and document the full installation process step by step.
 
-This lab is designed to demonstrate practical skills in virtualization, Linux server preparation, Wazuh deployment, agent onboarding, and validation.
+The objective of this lab is to build a practical Wazuh SIEM environment for cybersecurity monitoring, detection, and analysis.
+
+This lab is not only focused on installing Wazuh. The main purpose is to create a portfolio-ready environment where I can document SIEM use cases, simulate security events, validate detections, and analyze alerts from a SOC perspective.
 
 ## Lab Scope
-This repository covers the initial deployment phase of the lab, including:
-- VMware Workstation installation
-- Ubuntu virtual machine creation
-- Wazuh installation
-- initial dashboard access
-- agent installation
-- basic validation steps
+
+This lab includes the deployment and preparation of the following systems:
+
+- **Wazuh Server** running on Ubuntu Server
+- **Windows Server** monitored with the Wazuh Agent
+- **Kali Linux** used for testing, traffic generation, and future pentesting scenarios
+- **VMware Workstation** as the virtualization platform
 
 ## Lab Environment
-The lab will be built using the following components:
 
-- **Host system:** Windows
-- **Virtualization platform:** VMware Workstation
-- **Wazuh server:** Ubuntu Linux virtual machine
-- **Monitored systems:** Windows and Linux endpoints with Wazuh agents
+The environment is designed to simulate a small cybersecurity lab where different endpoints generate logs and security events that are collected and analyzed by Wazuh.
+
+Current machines:
+
+- **Host Machine:** Windows
+- **SIEM Server:** Ubuntu Server with Wazuh
+- **Monitored Endpoint:** Windows Server
+- **Testing Machine:** Kali Linux
 
 ## High-Level Architecture
-The environment follows a simple architecture:
 
-1. A Windows host runs VMware Workstation.
-2. An Ubuntu virtual machine is created inside VMware.
-3. Wazuh is installed on the Ubuntu VM.
-4. Additional endpoints are connected to Wazuh as agents.
-5. Logs and events are sent from the agents to the Wazuh server for monitoring.
+1. VMware Workstation runs the virtual lab.
+2. Ubuntu Server hosts the Wazuh platform.
+3. Windows Server is connected as a monitored endpoint.
+4. Kali Linux is used to generate activity for future SIEM use cases.
+5. Wazuh collects logs, detects events, and provides alerts for analysis.
 
 ## Why This Lab Matters
+
 This lab helps demonstrate hands-on experience in:
-- building a cybersecurity lab
-- deploying a SIEM solution
-- preparing systems for monitoring
-- connecting endpoints to a central platform
-- validating that monitoring works correctly
+
+- SIEM deployment
+- Wazuh configuration
+- Agent onboarding
+- Windows and Linux monitoring
+- Security use case development
+- Detection validation
+- SOC alert analysis
+- Future Kali Linux and Pentesting scenarios
+
+## Lab Documentation Steps
+
+Follow the lab documentation in order:
+
+1. **Lab Overview**  
+   Current section.
+
+2. [Install VMware Workstation](02-install-vmware.md)
+
+3. [Create Ubuntu Virtual Machine](03-Create-Ubuntu-VM.md)
+
+4. [Ubuntu VM Configuration](04-VM-Ubuntu-Configuration.md)
+
+5. [Configure Ubuntu Before Installing Wazuh](05-Configuration-Ubuntu-Before-Install-Wazuh.md)
+
+6. [Install Wazuh All-in-One](06-Wazuh-Installation.md)
+
+7. [Install Windows Server 2022](07-Windows_Server_2022.md)
+
+8. [Install Wazuh Agent on Windows Server](08-Installing-the-Wazuh-Agent-on-Windows-Server.md)
+
+9. [Install Kali Linux](09-Install-Kali-Linux.md)
 
 ## Expected Outcome
-At the end of this lab, the environment should:
-- have a working Wazuh installation
-- allow access to the Wazuh dashboard
-- show connected agents
-- receive basic logs and security events
 
-## Next Steps
-The next phase of this project is the installation of VMware Workstation and preparation of the virtual environment.
+At the end of this deployment phase, the lab should have:
+
+- A working Wazuh server
+- Access to the Wazuh Dashboard
+- A Windows Server endpoint connected to Wazuh
+- A Kali Linux machine ready for testing
+- A base environment prepared for future SIEM use cases
+
+## Next Phase
+
+The next phase of this project will focus on documenting SIEM use cases, detection logic, alert analysis, and practical SOC investigation workflows.
