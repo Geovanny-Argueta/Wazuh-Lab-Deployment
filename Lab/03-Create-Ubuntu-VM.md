@@ -79,3 +79,15 @@ At this point, the virtual machine is ready for the Ubuntu Server installation.
 - **CPU:** 4 vCPU
 - **RAM:** 8 GB
 - **Disk:** 50 GB
+
+- ---
+
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="02-install-vmware.md">⬅️ Previous Step: Install VMware Workstation</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="04-VM-Ubuntu-Configuration.md">Next Step: Ubuntu VM Configuration ➡️</a>
+</p>
