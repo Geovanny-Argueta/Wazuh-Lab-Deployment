@@ -151,3 +151,15 @@ systemctl start wazuh-manager
 You can run these commands either with `sudo` or while already logged in as `root`.
 
 ![paso11](../Docs/Wazuh-Instalation/step-11.png)
+
+---
+
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="05-Configuration-Ubuntu-Before-Install-Wazuh.md">⬅️ Previous Step: Configure Ubuntu Before Installing Wazuh</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="07-Windows_Server_2022.md">Next Step: Install Windows Server 2022 ➡️</a>
+</p>
