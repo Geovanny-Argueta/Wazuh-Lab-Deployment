@@ -2,9 +2,7 @@
 
 ## Objective
 
-The objective of this lab is to build a practical Wazuh SIEM environment for cybersecurity monitoring, detection, and analysis.
-
-This lab is not only focused on installing Wazuh. The main purpose is to create a portfolio-ready environment where I can document SIEM use cases, simulate security events, validate detections, and analyze alerts from a SOC perspective.
+The objective of this lab is to build a practical Wazuh SIEM environment for cybersecurity monitoring, detection, and analysis, this lab is not only focused on installing Wazuh. The main purpose is to create a portfolio-ready environment where I can document SIEM use cases, simulate security events, validate detections, and analyze alerts from a SOC perspective.
 
 ## Lab Scope
 
@@ -15,17 +13,6 @@ This lab includes the deployment and preparation of the following systems:
 - **Kali Linux** used for testing, traffic generation, and future pentesting scenarios
 - **VMware Workstation** as the virtualization platform
 
-## Lab Environment
-
-The environment is designed to simulate a small cybersecurity lab where different endpoints generate logs and security events that are collected and analyzed by Wazuh.
-
-Current machines:
-
-- **Host Machine:** Windows
-- **SIEM Server:** Ubuntu Server with Wazuh
-- **Monitored Endpoint:** Windows Server
-- **Testing Machine:** Kali Linux
-
 ## High-Level Architecture
 
 1. VMware Workstation runs the virtual lab.
@@ -33,19 +20,6 @@ Current machines:
 3. Windows Server is connected as a monitored endpoint.
 4. Kali Linux is used to generate activity for future SIEM use cases.
 5. Wazuh collects logs, detects events, and provides alerts for analysis.
-
-## Why This Lab Matters
-
-This lab helps demonstrate hands-on experience in:
-
-- SIEM deployment
-- Wazuh configuration
-- Agent onboarding
-- Windows and Linux monitoring
-- Security use case development
-- Detection validation
-- SOC alert analysis
-- Future Kali Linux and Pentesting scenarios
 
 ## Lab Documentation Steps
 
