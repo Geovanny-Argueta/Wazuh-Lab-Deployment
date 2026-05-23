@@ -74,3 +74,16 @@ Finally, power on the Wazuh VM, sign in with your credentials, and run the follo
 
 ```bash
 sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="04-VM-Ubuntu-Configuration.md">⬅️ Previous Step: Ubuntu VM Configuration</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="06-Wazuh-Installation.md">Next Step: Install Wazuh All-in-One ➡️</a>
+</p>
