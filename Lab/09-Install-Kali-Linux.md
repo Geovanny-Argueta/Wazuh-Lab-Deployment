@@ -82,3 +82,15 @@ After logging in, the Kali Linux VM will be ready to use in the lab environment.
 ## Final Result
 
 At this point, the Kali Linux virtual machine has been successfully downloaded, imported into VMware Workstation, renamed, and started for the first time, this VM is now ready to be used for cybersecurity testing, security tools, Wazuh log generation, and future lab exercises.
+
+---
+
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="08-Installing-the-Wazuh-Agent-on-Windows-Server.md">⬅️ Previous Step: Install Wazuh Agent on Windows Server</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="01-Lab_Overview.md">Back to First Step: Lab Overview 🔄</a>
+</p>
