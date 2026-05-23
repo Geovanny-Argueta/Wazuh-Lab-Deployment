@@ -179,3 +179,15 @@ After reboot:
 ---
 
 ✅ Ubuntu Server is now successfully installed and ready for the next steps.
+
+---
+
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="03-Create-Ubuntu-VM.md">⬅️ Previous Step: Create Ubuntu Virtual Machine</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="05-Configuration-Ubuntu-Before-Install-Wazuh.md">Next Step: Configure Ubuntu Before Installing Wazuh ➡️</a>
+</p>
