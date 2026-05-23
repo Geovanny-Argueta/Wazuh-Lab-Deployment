@@ -35,16 +35,12 @@ https://support.broadcom.com/
 
 ---
 
-<table>
-  <tr>
-    <td align="left">
-      <a href="01-Lab_Overview.md">⬅️ Previous Step: Lab Overview</a>
-    </td>
-    <td>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </td>
-    <td align="right">
-      <a href="03-Create-Ubuntu-VM.md">Next Step: Create Ubuntu Virtual Machine ➡️</a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="01-Lab_Overview.md">⬅️ Previous Step: Lab Overview</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="03-Create-Ubuntu-VM.md">Next Step: Create Ubuntu Virtual Machine ➡️</a>
+</p>
