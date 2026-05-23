@@ -159,3 +159,14 @@ At this point, the Wazuh Agent has been successfully installed on Windows Server
 - Agent status
 - Endpoint monitoring data
 
+---
+
+<p align="center">
+  <strong>Lab Navigation</strong>
+</p>
+
+<p align="center">
+  <a href="07-Windows_Server_2022.md">⬅️ Previous Step: Install Windows Server 2022</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="09-Install-Kali-Linux.md">Next Step: Install Kali Linux ➡️</a>
+</p>
