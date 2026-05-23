@@ -33,3 +33,15 @@ https://support.broadcom.com/
 13. Restart the host machine if required.
 14. Open VMware Workstation and confirm it starts correctly.
 
+---
+
+<table>
+  <tr>
+    <td align="left">
+      ⬅️ <a href="01-Lab_Overview.md">Previous Step: Lab Overview</a>
+    </td>
+    <td align="right">
+      <a href="03-Create-Ubuntu-VM.md">Next Step: Create Ubuntu Virtual Machine</a> ➡️
+    </td>
+  </tr>
+</table>
