@@ -1,87 +1,82 @@
-## Install Kali Linux Virtual Machine
+# Install Kali Linux
 
-In this section, we will download the official Kali Linux virtual machine image, import it into VMware Workstation, organize the VM files, and start Kali Linux for the first time. This VM will be used later as part of the Wazuh lab environment for security testing, log generation, and cybersecurity practice.
+## Objective
 
----
+Kali Linux is the testing machine in this lab. I use it to generate controlled network and authentication activity so I can confirm whether Wazuh receives the expected logs and triggers the correct detections.
 
-### Step 1: Download the Kali Linux Virtual Machine
+All testing should remain inside the isolated lab network.
 
-First, go to the official Kali Linux download page:
+## Import the Kali Virtual Machine
 
-https://www.kali.org/get-kali/#kali-platforms
+### 1. Download the VMware Image
 
-On the download page, select the **Virtual Machines** option, after that, choose the **VMware** image and click **Download**, this option is useful because Kali Linux already provides a prebuilt virtual machine, so we do not need to install the operating system manually from an ISO file.
+Go to the [official Kali Linux download page](https://www.kali.org/get-kali/#kali-virtual-machines), select **Virtual Machines**, and download the VMware image.
 
-![step1](../Docs/Install-Kali-Linux/step-1.png)
-![step2](../Docs/Install-Kali-Linux/step-2.png)
+![Kali virtual machine downloads](../Docs/Install-Kali-Linux/step-1.png)
+![Kali VMware image](../Docs/Install-Kali-Linux/step-2.png)
 
----
+Using the prebuilt image avoids a separate operating system installation.
 
-### Step 2: Extract the Downloaded File
+### 2. Extract the Download
 
-Once the Kali Linux VMware file has been downloaded, locate the compressed file on your computer, right-click the file and extract it, wait until the extraction process finishes completely.
+Extract the compressed file and wait until the process finishes. The new folder should contain the VMware configuration and virtual disk files.
 
-After the file is extracted, you should see the Kali Linux virtual machine files, including the VMware configuration file.
+![Extracted Kali files](../Docs/Install-Kali-Linux/step-3.png)
 
-![step2](../Docs/Install-Kali-Linux/step-3.png)
+### 3. Organize the VM Files
 
----
+Move the extracted folder to the location where you keep the other lab machines. I renamed the folder to `Kali-Linux` to keep the environment easy to identify.
 
-### Step 3: Move the Kali Linux VM Folder to the Virtual Machines Directory
+In VMware Workstation, select **Open a Virtual Machine**.
 
-After extracting the file, I like to keep my lab organized by moving the Kali Linux VM folder to the same location where I store all my other virtual machines, this helps keep the lab structure clean and easy to manage.
+![Open a virtual machine](../Docs/Install-Kali-Linux/step-4.png)
 
-You can also rename the extracted folder to something simple, for example: **Kali Linux**, after organizing the folder, open **VMware Workstation**, go to **Home**, and select:
+### 4. Import the VM
 
-**Open a Virtual Machine**
+Open the extracted folder, select the VMware configuration file, and choose **Open**.
 
-![step3](../Docs/Install-Kali-Linux/step-4.png)
+![Kali VMware configuration](../Docs/Install-Kali-Linux/step-5.png)
 
----
+Rename the machine in VMware if needed.
 
-### Step 4: Open the Kali Linux Virtual Machine in VMware
+![Kali VM in VMware](../Docs/Install-Kali-Linux/step-6.png)
 
-Now browse to the folder where you extracted and saved the Kali Linux VM, select the VMware virtual machine file and click **Open**, this will import the Kali Linux VM into VMware Workstation.
+### 5. Review the Hardware and Network
 
-![step4](../Docs/Install-Kali-Linux/step-5.png)
+Before starting Kali, review the CPU, RAM, disk, and network adapter.
 
----
+Connect Kali to the same **Host-Only** network used by the monitored endpoints. Add temporary NAT access only when Kali needs updates or packages.
 
-### Step 5: Rename the Virtual Machine in VMware
+### 6. Start Kali Linux
 
-After opening the Kali Linux VM, it should now appear in VMware Workstation, to keep the lab organized, click on the VM name and rename it to: **Kali Linux**, this makes it easier to identify the machine later, especially when working with multiple virtual machines in the Wazuh lab.
+Power on the VM and wait for the login screen.
 
-![step5](../Docs/Install-Kali-Linux/step-6.png)
+Kali images may ship with the default credentials:
 
----
+- **Username:** `kali`
+- **Password:** `kali`
 
-### Step 6: Review the Virtual Machine Hardware Settings
+Change the default password immediately:
 
-Before starting the VM, you can review the hardware settings if needed, for example, you can adjust:
-- RAM
-- CPU
-- Disk settings
-- Network adapter
-In this lab, I will leave the default hardware settings because the Kali Linux VMware image already works well with the recommended configuration.
+```bash
+passwd
+```
 
+Do not publish the new password.
 
----
+### 7. Verify Lab Connectivity
 
-### Step 7: Power On the Kali Linux Virtual Machine
+From the **Kali Linux VM**, verify that the Wazuh server and monitored endpoint are reachable:
 
-Now power on the Kali Linux virtual machine, wait until the system finishes booting, do not press **Enter** or click anything during the boot process. Just wait until the login screen appears.
+```bash
+ip addr
+ping -c 4 <WAZUH_SERVER_IP>
+ping -c 4 <WINDOWS_SERVER_IP>
+```
 
-Once the login screen is displayed, use the default Kali Linux credentials:
-- **Username:** : **kali**
-- **Password:** : **kali**
+## Expected Result
 
-After logging in, the Kali Linux VM will be ready to use in the lab environment.
-
----
-
-## Final Result
-
-At this point, the Kali Linux virtual machine has been successfully downloaded, imported into VMware Workstation, renamed, and started for the first time, this VM is now ready to be used for cybersecurity testing, security tools, Wazuh log generation, and future lab exercises.
+Kali Linux should start normally, use a non-default password, and communicate with the other machines through the isolated lab network. It is now ready for controlled detection tests.
 
 ---
 
@@ -90,7 +85,7 @@ At this point, the Kali Linux virtual machine has been successfully downloaded, 
 </p>
 
 <p align="center">
-  <a href="08-Installing-the-Wazuh-Agent-on-Windows-Server.md">⬅️ Previous Step: Install Wazuh Agent on Windows Server</a>
+  <a href="08-Installing-the-Wazuh-Agent-on-Windows-Server.md">⬅️ Previous: Install the Wazuh Agent</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="01-Lab_Overview.md">Back to First Step: Lab Overview 🔄</a>
+  <a href="01-Lab_Overview.md">Back to Lab Overview 🔄</a>
 </p>
