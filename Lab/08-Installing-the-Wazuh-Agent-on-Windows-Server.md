@@ -47,8 +47,8 @@ Select **Deploy new agent**.
 
 Select **Windows MSI 32/64 bits** and provide:
 
-- **Server address:** The internal IP address of the Wazuh Manager
-- **Agent name:** A fictional, descriptive hostname such as `win-server-01`
+- **Server address:** `192.168.10.128`
+- **Agent name:** `Windows-Server-2022`
 - **Group:** `default`, unless you have created a separate lab group
 
 ![Windows agent configuration](../Docs/Wazuh-Agent/step-5.1.png)
