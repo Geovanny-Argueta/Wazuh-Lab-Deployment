@@ -1,156 +1,119 @@
-## Install Wazuh All-in-One and Access the Dashboard
+# Install Wazuh All-in-One
 
-In this section, I will install **Wazuh All-in-One** on a single Ubuntu server. This is a good option for a lab because it keeps everything on one machine, making the setup easier and faster to understand.
+## Objective
 
-Wazuh is an open-source security platform used to collect logs, detect suspicious activity, and monitor systems from one place. Its architecture is simple once you break it down: the **Manager** is the part that receives and analyzes events, the **Indexer** is the component that stores and searches the data, and the **Dashboard** is the web interface where we view alerts, search logs, and manage the platform.
+For this lab, I installed the Wazuh Manager, Indexer, and Dashboard on the same Ubuntu server. An all-in-one deployment is easier to operate in a small environment and still lets me follow the complete path from log collection to alert investigation.
 
-### Step 1 - Open the Wazuh Quick Start page
+The installation command below reflects the version used when I built the lab. Before reproducing the setup, check the [current Wazuh Quickstart](https://documentation.wazuh.com/current/quickstart.html) in case the package URL or supported operating systems have changed.
 
-First, open the official Wazuh Quick Start page. This is the guide I will use to install Wazuh in the lab:
-https://documentation.wazuh.com/current/quickstart.html
+## Wazuh Components
 
+- **Manager:** Receives endpoint data, evaluates rules, and generates alerts
+- **Indexer:** Stores the security data and makes it searchable
+- **Dashboard:** Provides the web interface used for monitoring and investigation
 
-### Step 2 - Power on the VM and identify its IP address
+## Installation Steps
 
-Now power on the Wazuh VM and log in locally. Once inside the VM, run the following command to identify its IP address:
+### 1. Identify the Server Address
 
-~~~bash
+On the **Wazuh Ubuntu Server**, run:
+
+```bash
 ip addr
-~~~
+```
 
-In my case, the IP address of the Wazuh VM is `192.168.10.128`.
+In this lab, the Wazuh server uses the IP address `192.168.10.128`.
 
-![paso2](../Docs/Wazuh-Instalation/step-1.png)
+![Wazuh server IP address](../Docs/Wazuh-Instalation/step-1.png)
 
-### Step 3 - Connect to the Wazuh VM through SSH
+### 2. Connect Through SSH
 
-After identifying the IP address, open a **CMD window on the Windows host** and connect to the VM through SSH using the username and IP address:
+From a terminal on the **host machine**, connect using the lab administrator account:
 
-~~~bash
+```bash
 ssh geovanny-admin@192.168.10.128
-~~~
+```
 
-The first time you connect, SSH will ask if you want to trust the host. Type `yes`, then enter the password of the Wazuh VM user.
+Confirm the host fingerprint the first time you connect, then enter the Ubuntu account password.
 
-I prefer using SSH here because it makes it much easier to copy and paste the installation commands from the Wazuh documentation into the server.
+![SSH connection](../Docs/Wazuh-Instalation/step-2.png)
 
-![paso3](../Docs/Wazuh-Instalation/step-2.png)
+### 3. Download and Run the Installer
 
-### Step 4 - Switch to the root user
+The lab was installed with the Wazuh 4.14 installation assistant:
 
-Once connected through SSH, switch to the root user so you can run the installation commands with the required privileges:
+```bash
+curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh
+sudo bash ./wazuh-install.sh -a
+```
 
-~~~bash
-sudo su
-~~~
+The process can take several minutes because it installs and configures all three central components.
 
-Then enter the password of the Wazuh VM user.
+![Wazuh installation command](../Docs/Wazuh-Instalation/step-4.png)
 
-![paso4](../Docs/Wazuh-Instalation/step-3.png)
+### 4. Save the Dashboard Credentials Securely
 
-### Step 5 - Run the Wazuh installation command
+At the end of the installation, the assistant displays the Dashboard username and password. I kept this output as part of the lab evidence because it confirms that the installation completed successfully.
 
-Now copy the installation command shown on the Wazuh Quick Start page and run it inside the SSH session:
+![Wazuh installation credentials](../Docs/Wazuh-Instalation/step-5.png)
 
-~~~bash
-curl -sO https://packages.wazuh.com/4.14/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
-~~~
+### 5. Verify the Services
 
-This process may take several minutes because Wazuh will install the **Indexer**, **Dashboard**, and **Manager** on the same server.
+On the **Wazuh Ubuntu Server**, run:
 
-![paso5](../Docs/Wazuh-Instalation/step-4.png)
+```bash
+sudo systemctl status wazuh-dashboard
+sudo systemctl status wazuh-indexer
+sudo systemctl status wazuh-manager
+```
 
-### Step 6 - Save the Dashboard credentials
+Each service should show **active (running)**.
 
-When the installation finishes, Wazuh will display a summary with the web access information, including the username and password for the Dashboard. Save these credentials because they will be needed later to log in.
+![Wazuh service status](../Docs/Wazuh-Instalation/step-7.png)
 
-This final output also confirms that the installation was completed successfully.
+If a service is stopped, start only the affected component:
 
-![paso6](../Docs/Wazuh-Instalation/step-5.png)
+```bash
+sudo systemctl start wazuh-dashboard
+sudo systemctl start wazuh-indexer
+sudo systemctl start wazuh-manager
+```
 
-### Step 7 - Verify that all Wazuh services are running
+### 6. Open the Dashboard
 
-To make sure everything started correctly, check the status of each main component from the Wazuh VM while still using the root user.
+From the host browser, open:
 
-The **Dashboard** is the web interface.  
-The **Indexer** stores and searches the alerts and logs.  
-The **Manager** receives the events, analyzes them, and generates alerts.
+```text
+https://192.168.10.128
+```
 
-Run the following commands one by one:
+A browser warning is expected because the lab uses a self-signed certificate. Confirm that the address belongs to your Wazuh server before continuing.
 
-~~~bash
-systemctl status wazuh-dashboard
-systemctl status wazuh-indexer
-systemctl status wazuh-manager
-~~~
+![Browser certificate warning](../Docs/Wazuh-Instalation/step-8.png)
+![Wazuh login page](../Docs/Wazuh-Instalation/step-9.png)
 
-Each service should appear as **active (running)**. To exit the status screen, press `Ctrl + C`.
+### 7. Sign In
 
-If any service is not running, start it manually with:
+Use the Dashboard credentials generated during installation.
 
-~~~bash
-systemctl start wazuh-dashboard
-systemctl start wazuh-indexer
-systemctl start wazuh-manager
-~~~
+![Wazuh Dashboard](../Docs/Wazuh-Instalation/step-11.png)
 
-![paso7](../Docs/Wazuh-Instalation/step-7.png)
+### 8. Recover the Generated Credentials if Needed
 
-### Step 8 - Open the Wazuh web interface
+If the original output was not saved, run this command from the directory that contains `wazuh-install-files.tar`:
 
-After confirming that all services are running, open your preferred browser on your host machine and browse to the IP address of the Wazuh VM using HTTPS:
-
-`https://192.168.10.128`
-
-Because this is a lab environment and Wazuh uses a self-signed certificate by default, the browser will likely show a security warning. Click **Advanced** and then continue to the site.
-
-![paso8](../Docs/Wazuh-Instalation/step-8.png)
-
-### Step 9 - Open the login page
-
-After bypassing the browser warning, the Wazuh login page should appear. This means the Dashboard is reachable and ready to use.
-
-![paso9](../Docs/Wazuh-Instalation/step-9.png)
-
-### Step 10 - Recover the credentials if needed
-
-If you did not save the credentials shown at the end of the installation, you can display them again by running the following command inside the Wazuh VM:
-
-~~~bash
+```bash
 sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
-~~~
+```
 
-This command shows all the credentials created during the installation. For the Dashboard login, use the first entry labeled:
+This command displays the credentials generated during the installation. For the Dashboard, use the entry labeled `Admin user for the web user interface and Wazuh indexer`.
 
-`Admin user for the web user interface and Wazuh indexer`
+![Recovered Wazuh credentials](../Docs/Wazuh-Instalation/step-10.2.png)
+![Wazuh administrator credentials](../Docs/Wazuh-Instalation/step-10.png)
 
-That is the account used to sign in to the Wazuh Dashboard.
-![step10.1](../Docs/Wazuh-Instalation/step-10.2.png)
-![paso10](../Docs/Wazuh-Instalation/step-10.png)
+## Expected Result
 
-### Step 11 - Log in to the Wazuh Dashboard
-
-Finally, enter the username and password and log in to the Wazuh Dashboard.
-
-If the page does not load, or if the login page does not appear, check again that these three services are running:
-
-~~~bash
-systemctl status wazuh-dashboard
-systemctl status wazuh-indexer
-systemctl status wazuh-manager
-~~~
-
-If any of them is stopped, start it with:
-
-~~~bash
-systemctl start wazuh-dashboard
-systemctl start wazuh-indexer
-systemctl start wazuh-manager
-~~~
-
-You can run these commands either with `sudo` or while already logged in as `root`.
-
-![paso11](../Docs/Wazuh-Instalation/step-11.png)
+The three Wazuh services should be running and the Dashboard should be accessible through HTTPS.
 
 ---
 
@@ -159,7 +122,7 @@ You can run these commands either with `sudo` or while already logged in as `roo
 </p>
 
 <p align="center">
-  <a href="05-Configuration-Ubuntu-Before-Install-Wazuh.md">⬅️ Previous Step: Configure Ubuntu Before Installing Wazuh</a>
+  <a href="05-Configuration-Ubuntu-Before-Install-Wazuh.md">⬅️ Previous: Configure VMware Networks</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="07-Windows_Server_2022.md">Next Step: Install Windows Server 2022 ➡️</a>
+  <a href="07-Windows_Server_2022.md">Next: Install Windows Server 2022 ➡️</a>
 </p>

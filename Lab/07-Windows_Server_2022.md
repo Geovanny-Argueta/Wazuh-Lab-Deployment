@@ -1,285 +1,144 @@
-## Installing Windows Server 2022 as the First Wazuh Agent
+# Install Windows Server 2022
 
-In this section, we will create and install a Windows Server 2022 virtual machine in VMware Workstation.  
-This server will be used later as our first Windows endpoint with the Wazuh Agent installed.
+## Objective
 
-The goal is to simulate a small corporate environment where Wazuh can collect Windows security events, system logs, authentication events, and other endpoint activity.
+Windows Server 2022 is the first endpoint connected to Wazuh in this lab. It gives me a Windows system where I can collect authentication, system, and security events before adding more advanced telemetry.
 
----
+## Recommended Resources
 
-### Step 1: Download the Windows Server 2022 ISO
-First, download the Windows Server 2022 ISO image from the official Microsoft Evaluation Center.
-Download link:
-https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022
-Select the **ISO download** option and choose the **64-bit edition**.
-![step1](..//Docs/Install_Windows_Server/step-1.png)
+| Resource | Lab configuration | Minimum |
+|---|---:|---:|
+| CPU | 2 vCPU | 1 vCPU |
+| RAM | 8 GB | 2 GB |
+| Disk | 80 GB | 60 GB |
 
----
+## Create the Virtual Machine
 
-### Step 2: Open VMware Workstation
-Open **VMware Workstation**.
-Then go to:
-**File > New Virtual Machine**
-This will start the wizard to create a new virtual machine.
-![step2](..//Docs/Install_Windows_Server/step-2.png)
+### 1. Download Windows Server
 
----
+Download the 64-bit ISO from the [Microsoft Evaluation Center](https://www.microsoft.com/es-es/evalcenter/download-windows-server-2022).
 
-### Step 3: Start the Virtual Machine Wizard
-Select the option:
-**Typical (recommended)**
-This option is enough for this lab because we do not need advanced custom hardware settings at this stage.
-Then click **Next**.
+![Windows Server download](../Docs/Install_Windows_Server/step-1.png)
 
----
+### 2. Start the VMware Wizard
 
-### Step 4: Select “I will install the operating system later”
-In this step, select:
-**I will install the operating system later**
-This allows us to manually attach the Windows Server ISO after creating the virtual machine.
-Then click **Next**.
+In VMware Workstation, select **File > New Virtual Machine**, then choose **Typical (recommended)**.
 
-![step4](..//Docs/Install_Windows_Server/step-3.png)
+![New virtual machine](../Docs/Install_Windows_Server/step-2.png)
 
----
+Select **I will install the operating system later**.
 
-### Step 5: Select the Guest Operating System
+![Install operating system later](../Docs/Install_Windows_Server/step-3.png)
 
-Select the following options:
+### 3. Select the Guest Operating System
+
+Choose:
+
 - **Guest operating system:** Microsoft Windows
 - **Version:** Windows Server 2022
-This helps VMware apply the correct default settings for the virtual machine.
-Then click **Next**.
 
-![step5](..//Docs/Install_Windows_Server/step-5.png)
+![Guest operating system](../Docs/Install_Windows_Server/step-5.png)
 
----
+### 4. Name the VM
 
-### Step 6: Name the Virtual Machine
+Use a clear lab name, for example:
 
-Assign a name to the virtual machine.
-In this lab, the VM will be named:
-**Windows_Server_Lab**
-You can also choose the location where the virtual machine files will be stored.
-Then click **Next**.
+`Windows-Server-01`
 
-![step6](..//Docs/Install_Windows_Server/step-6.png)
+![Windows VM name](../Docs/Install_Windows_Server/step-6.png)
 
----
+### 5. Configure the Disk and Hardware
 
-### Step 7: Configure the Virtual Disk
-For this lab, we will configure the virtual disk with:
-- **Disk size:** 80 GB
-- **Disk type:** Store virtual disk as a single file
+Assign an 80 GB disk and select **Store virtual disk as a single file**.
 
+![Virtual disk configuration](../Docs/Install_Windows_Server/step-7.png)
+![Hardware configuration](../Docs/Install_Windows_Server/step-7-2.png)
 
-![step7](..//Docs/Install_Windows_Server/step-7.png)
+Review the CPU, memory, disk, and network adapter before selecting **Finish**.
 
-Recommended resources for Windows Server 2022 in this lab:
-| Resource | Recommended |
-|---|---|
-| CPU | 2 vCPU |
-| RAM | 4 GB |
-| Disk | 80 GB |
+### 6. Attach the ISO
 
-Minimum resources:
-| Resource | Minimum |
-|---|---|
-| CPU | 1 vCPU |
-| RAM | 2 GB |
-| Disk | 60 GB |
+Open **Edit virtual machine settings**.
 
-In this lab, I will use:
-- **CPU:** 2 vCPU
-- **RAM:** 8 GB
-- **Disk:** 80 GB
+![Edit VM settings](../Docs/Install_Windows_Server/step-8.png)
 
-![step7](..//Docs/Install_Windows_Server/step-7-2.png)
+Select **CD/DVD (SATA)**, choose **Use ISO image file**, and attach the Windows Server ISO. Make sure **Connect at power on** is enabled.
 
-Important note: Select **Store virtual disk as a single file** to keep the virtual disk in one file. This is useful for lab environments and can help with disk performance.
-Then click **Next**.
+![Attach Windows Server ISO](../Docs/Install_Windows_Server/step-9.png)
 
----
+## Install Windows Server
 
-### Step 8: Review the Virtual Machine Settings
+### 7. Start the Installer
 
-Before creating the VM, review the configuration.
-In this example, the VM is configured with:
+Power on the VM and press a key when prompted to boot from the ISO.
 
-- Windows Server 2022
-- 80 GB disk
-- 8 GB RAM
-- 2 CPU cores
-- Network Adapter enabled
-If everything looks correct, click **Finish**.
+To release the mouse and keyboard from VMware, press **Ctrl + Alt**.
 
----
+### 8. Select Language and Keyboard
 
-### Step 9: Edit the Virtual Machine Settings
+Choose the language, time format, and keyboard layout that match your environment, then select **Install now**.
 
-After creating the VM, click:
-**Edit virtual machine settings**
-We need to attach the Windows Server 2022 ISO file before powering on the VM.
+![Windows language settings](../Docs/Install_Windows_Server/step-11.png)
 
-![step9](..//Docs/Install_Windows_Server/step-8.png)
+### 9. Select the Edition
 
----
+For this lab, I used:
 
-### Step 10: Attach the Windows Server ISO
-
-Go to:
-**CD/DVD (SATA)**
-
-Then select:
-**Use ISO image file**
-
-Browse and select the Windows Server 2022 ISO file that was downloaded from Microsoft.
-Make sure **Connect at power on** is enabled.
-Then click **OK**.
-
-![step10](..//Docs/Install_Windows_Server/step-9.png)
-
----
-
-### Step 11: Power On the Virtual Machine
-
-Power on the virtual machine.
-When the VM starts, you may see a message similar to:
-**Press any key to boot from CD or DVD**
-Press any key to start the Windows Server installation from the ISO.
-
-Important note:  
-To release your mouse and keyboard from the VM, press:**CTRL + ALT**
-
----
-
-### Step 12: Select Language and Keyboard Settings
-
-The Windows Server installation screen will appear.
-Select the language, time format, and keyboard layout.
-
-For this lab, I selected:
-- **Language:** English (United States)
-- **Time and currency format:** English (United States)
-- **Keyboard:** US
-
-Then click **Next**.
-After that, click **Install now**.
-
-![step12](..//Docs/Install_Windows_Server/step-11.png)
-
----
-
-### Step 13: Select the Windows Server Edition
-Select the operating system edition that you want to install.
-
-For this lab, select:
 **Windows Server 2022 Standard Evaluation (Desktop Experience)**
-The **Desktop Experience** version includes the graphical interface, which makes it easier to manage the server in a lab environment.
-Then click **Next**.
 
-![step13](..//Docs/Install_Windows_Server/step-12.png)
+The Desktop Experience edition includes the graphical interface, which makes the first setup easier.
 
----
+![Windows Server edition](../Docs/Install_Windows_Server/step-12.png)
 
-### Step 14: Accept the License Terms
-Read and accept the Microsoft license terms.
-Then click **Next** to continue with the installation.
+### 10. Accept the License and Select Installation Type
 
----
+Accept the license terms and choose:
 
-### Step 15: Select the Installation Type
-
-Select the option:
 **Custom: Install Microsoft Server Operating System only (advanced)**
-This option performs a clean installation of Windows Server.
 
-Then click **Next**
+![Installation type](../Docs/Install_Windows_Server/step-13.png)
 
-![step15](..//Docs/Install_Windows_Server/step-13.png)
+### 11. Select the Disk
 
----
+Choose **Drive 0 Unallocated Space** and continue.
 
-### Step 16: Select the Installation Disk
+![Installation disk](../Docs/Install_Windows_Server/step-14.png)
 
-Select the available disk:
-**Drive 0 Unallocated Space**
+### 12. Complete the Installation
 
-This is the virtual disk created earlier in VMware.
-Then click **Next**.
-![step16](..//Docs/Install_Windows_Server/step-14.png)
+Wait while Windows copies the files and installs the operating system.
 
----
+![Windows installation](../Docs/Install_Windows_Server/step-15.png)
 
-### Step 17: Wait for Windows Server to Install
+### 13. Configure the Administrator Account
 
-Windows Server will start installing.
-The installation process includes:
-- Copying Windows files
-- Getting files ready for installation
-- Installing features
-- Installing updates
-- Finishing the installation
+After the restart, create a strong password for the built-in **Administrator** account. Keep this password out of screenshots and public documentation.
 
-This process may take several minutes.
+![Administrator password setup](../Docs/Install_Windows_Server/step-16.png)
 
-![step17](..//Docs/Install_Windows_Server/step-15.png)
+### 14. Sign In
 
----
+In VMware Workstation, right-click the VM and select **Send Ctrl + Alt + Del**, then sign in as Administrator.
 
-### Step 18: Create the Administrator Password
+![Windows sign-in](../Docs/Install_Windows_Server/step-17.png)
 
-After the installation finishes, the VM will restart automatically.
-When Windows Server starts for the first time, it will ask you to create a password for the built-in Administrator account.
-Enter a secure password and click **Finish**.
+The Windows Server desktop should load normally.
 
-Important note:  
-The default username is: **Administrator**
+![Windows Server desktop](../Docs/Install_Windows_Server/step-18.png)
 
-![step18](..//Docs/Install_Windows_Server/step-16.png)
+## Connect the VM to the Lab Network
 
----
+Power off the VM and open:
 
-### Step 19: Unlock the Windows Server Login Screen
+**Edit virtual machine settings > Network Adapter**
 
-To log in to Windows Server, you need to send the following key combination:
-**CTRL + ALT + DELETE**
+Connect the adapter to the internal VMware network used by the Wazuh server. The two systems must be able to communicate before the agent can be registered.
 
-In VMware Workstation, right-click the virtual machine and select:
-**Send Ctrl + Alt + Del**
-After that, enter the Administrator password.
+![Windows network adapter](../Docs/Install_Windows_Server/step-19nota.png)
 
-![step19](..//Docs/Install_Windows_Server/step-17.png)
+## Expected Result
 
----
-
-## Step 20: Validate the Windows Server Desktop
-After logging in, the Windows Server desktop should load successfully.
-At this point, the Windows Server VM is installed and ready for the next configuration steps.
-This server will later be used to install the Wazuh Agent and forward Windows logs to the Wazuh Manager.
-
-![step20](..//Docs/Install_Windows_Server/step-18.png)
-
----
-
-## Step 21: Validate the Network Adapter
-If the Windows Server VM does not have network connectivity, power off the VM and check the network settings.
-
-Go to:**Edit virtual machine settings > Network Adapter**
-Make sure the VM is connected to the correct virtual network used in the lab.
-In this lab, the VM is connected to a custom VMware network adapter.
-
-Important note:  
-Use the same network segment where the Wazuh Manager can communicate with this Windows Server. This will be required later when installing and registering the Wazuh Agent.
-Then click **OK**.
-
-![step21](..//Docs/Install_Windows_Server/step-19nota.png)
-
----
-
-## Final Result
-
-At this point, the Windows Server 2022 virtual machine has been successfully installed in VMware Workstation, this VM will be used as the first Windows endpoint in the Wazuh lab.  
+Windows Server 2022 should start normally and be connected to the internal lab network. It is now ready for the Wazuh Agent installation.
 
 ---
 
@@ -288,7 +147,7 @@ At this point, the Windows Server 2022 virtual machine has been successfully ins
 </p>
 
 <p align="center">
-  <a href="06-Wazuh-Installation.md">⬅️ Previous Step: Install Wazuh All-in-One</a>
+  <a href="06-Wazuh-Installation.md">⬅️ Previous: Install Wazuh All-in-One</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="08-Installing-the-Wazuh-Agent-on-Windows-Server.md">Next Step: Install Wazuh Agent on Windows Server ➡️</a>
+  <a href="08-Installing-the-Wazuh-Agent-on-Windows-Server.md">Next: Install the Wazuh Agent ➡️</a>
 </p>
