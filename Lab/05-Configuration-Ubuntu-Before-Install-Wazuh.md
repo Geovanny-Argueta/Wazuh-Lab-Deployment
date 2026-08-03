@@ -1,80 +1,101 @@
-## Configure the Wazuh Lab Network in VMware Workstation
+# Configure the VMware Lab Networks
 
-In this section, I will prepare the virtual network layout for the Wazuh lab in VMware Workstation. The goal is to create one network with internet access using NAT and a second internal network using Host-Only, so the lab feels more realistic and gives better control over how the virtual machines communicate.
+## Objective
 
-### Step 1 - Open the Virtual Network Editor
+I use two virtual networks in this lab:
 
-First, open VMware Workstation, click **Edit**, and then select **Virtual Network Editor**.
+- A **NAT network** for software updates and package downloads
+- A **Host-Only network** for communication between the lab machines
 
-![step1](../Docs/Configuration-before-install-wazuh/step-1.png)
+This setup keeps the testing traffic separate from the physical network while still allowing the Wazuh server to reach the internet when needed.
 
-### Step 2 - Enable Administrative Changes
+## Network Plan
 
-Once the Virtual Network Editor opens, click **Change Settings** and confirm with **Yes** so VMware allows you to modify the virtual networks.
+| VMware Network | Type | Subnet | Purpose |
+|---|---|---|---|
+| VMnet1 | NAT | `192.168.10.0/24` | Internet access |
+| VMnet2 | Host-Only | `10.10.10.0/24` | Internal lab traffic |
 
-![step2](../Docs/Configuration-before-install-wazuh/step-2.png)
+Your VMnet numbers may be different if VMware already uses VMnet1 or VMnet2. The important part is to keep one NAT network and one Host-Only network.
 
-### Step 3 - Remove Existing VMnet Networks (Optional)
+## Configuration Steps
 
-At this point, I remove the existing VMnet networks by selecting them and clicking **Remove Network**. This step is optional, but I like doing it so I can start with a cleaner setup and clearly understand how my lab networks are structured.
+### 1. Open Virtual Network Editor
 
-![]()
+In VMware Workstation, select:
 
-### Step 4 - Add the First Virtual Network
+**Edit > Virtual Network Editor**
 
-Next, click **Add Network** and choose any available VMnet **except VMnet0**. I avoid VMnet0 because it is usually reserved for **Bridged** mode, which connects the VM directly to the real physical network.
+![Virtual Network Editor](../Docs/Configuration-before-install-wazuh/step-1.png)
 
-![step4](../Docs/Configuration-before-install-wazuh/step-3.png)
+### 2. Enable Administrative Changes
 
-### Step 5 - Confirm the New VMnet
+Select **Change Settings** and approve the prompt.
 
-After selecting the VMnet, click **OK** to create it.
+![Change network settings](../Docs/Configuration-before-install-wazuh/step-2.png)
 
-![step5](../Docs/Configuration-before-install-wazuh/step-5.png)
+### 3. Create the NAT Network
 
-### Step 6 - Configure the NAT Network
+Select **Add Network**, choose an available VMnet other than VMnet0, and create the network.
 
-Now configure this first network as **NAT**. For the **Subnet IP**, use **192.168.10.0** like in the example, or choose another subnet if you prefer. Once everything looks correct, click **Apply** and then **OK**.
+VMnet0 is normally reserved for Bridged networking, so I left it unchanged.
 
-![setp6](../Docs/Configuration-before-install-wazuh/step-6.png)
+![Add a virtual network](../Docs/Configuration-before-install-wazuh/step-3.png)
+![Confirm the VMnet](../Docs/Configuration-before-install-wazuh/step-5.png)
 
-### Step 7 - Create the Internal Host-Only Network
+Set the network type to **NAT** and use `192.168.10.0/24`, or another private subnet that does not conflict with your home network.
 
-Repeat the same process to create a second VMnet. This time, configure it as **Host-Only** so it works as an internal lab network. For this network, use the **10.10.10.0** subnet with the mask **255.255.255.0**.
+![NAT network configuration](../Docs/Configuration-before-install-wazuh/step-6.png)
 
-![step7](../Docs/Configuration-before-install-wazuh/step-7.png)
+### 4. Create the Host-Only Network
 
-### Step 8 - Open the Wazuh VM Hardware Settings
+Create a second VMnet and select **Host-Only**. I used:
 
-With the **Wazuh VM powered off**, click **Edit virtual machine settings** and go to the current **Network Adapter** configuration.
+- Subnet: `10.10.10.0`
+- Mask: `255.255.255.0`
 
-![step8](../Docs/Configuration-before-install-wazuh/step-8.png)
+![Host-Only network configuration](../Docs/Configuration-before-install-wazuh/step-7.png)
 
-### Step 9 - Assign the First Adapter to VMnet1
+I did not remove VMware's existing default networks because other virtual machines may depend on them.
 
-In the network settings, select **Custom: Specific virtual network**, choose **VMnet1 (NAT)**, and click **OK**. This adapter will provide internet access to the Wazuh VM.
+### 5. Add the NAT Adapter to the Wazuh VM
 
-![step9](../Docs/Configuration-before-install-wazuh/step-9.png)
+Power off the Wazuh VM and open **Edit virtual machine settings**.
 
+![Wazuh VM settings](../Docs/Configuration-before-install-wazuh/step-8.png)
 
-### Step 10 - Add a Second Network Adapter
+Set the first adapter to **Custom: Specific virtual network** and select the NAT VMnet.
 
-Go back again to **Edit virtual machine settings**, click **Add**, select **Network Adapter**, and then click **Finish**.
+![NAT adapter assignment](../Docs/Configuration-before-install-wazuh/step-9.png)
 
+### 6. Add the Internal Adapter
 
-### Step 11 - Assign the Second Adapter to VMnet2
+Add a second **Network Adapter** and assign it to the Host-Only VMnet.
 
-Open the new **Network Adapter 2**, select **Custom: Specific virtual network**, choose **VMnet2 (Host-Only)**, and click **OK**. This second adapter will be used for the internal lab communication.
+![Host-Only adapter assignment](../Docs/Configuration-before-install-wazuh/step-11.png)
 
-![setp11](../Docs/Configuration-before-install-wazuh/step-11.png)
+### 7. Update Ubuntu
 
-### Step 12 - Power On the Wazuh VM and Update the System
-
-Finally, power on the Wazuh VM, sign in with your credentials, and run the following command to update the Ubuntu system packages. Since the command uses `sudo`, the system will ask for your password. Then just wait for the update process to finish.
+Start the VM and run the following command on the **Wazuh Ubuntu Server**:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
+### 8. Verify the Interfaces
+
+On the **Wazuh Ubuntu Server**, check the assigned addresses and routes:
+
+```bash
+ip addr
+ip route
+```
+
+The server should have one interface connected to the NAT network and another connected to the internal lab network.
+
+## Expected Result
+
+The Wazuh server should reach the internet through NAT and communicate with the other lab machines through the Host-Only network.
 
 ---
 
@@ -83,7 +104,7 @@ sudo apt update && sudo apt upgrade -y
 </p>
 
 <p align="center">
-  <a href="04-VM-Ubuntu-Configuration.md">⬅️ Previous Step: Ubuntu VM Configuration</a>
+  <a href="04-VM-Ubuntu-Configuration.md">⬅️ Previous: Install Ubuntu Server</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="06-Wazuh-Installation.md">Next Step: Install Wazuh All-in-One ➡️</a>
+  <a href="06-Wazuh-Installation.md">Next: Install Wazuh All-in-One ➡️</a>
 </p>
