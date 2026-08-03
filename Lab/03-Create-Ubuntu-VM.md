@@ -1,93 +1,82 @@
-# Create Ubuntu Virtual Machine
+# Create the Ubuntu Virtual Machine
 
 ## Objective
-The objective of this step is to create the virtual machine that will host the Wazuh server in the lab environment.
 
-This virtual machine will be prepared in VMware Workstation and configured with the resources required for a small all-in-one Wazuh lab.
+This virtual machine will host the complete Wazuh platform: Manager, Indexer, and Dashboard. I assigned enough resources for a small all-in-one deployment while leaving room for logs and future testing.
 
-## **Steps**
-# Ubuntu Server Installation for the Wazuh Lab
+This lab was originally built with **Ubuntu Server 22.04 LTS**. If you reproduce it with a newer release, check the current Wazuh compatibility list before installing.
 
-The first step is to install the operating system. For this lab, we will use **Ubuntu Server 22.04 LTS**, since it is a stable and compatible option for deploying **Wazuh All-in-One**, which includes the **Manager**, **Indexer**, and **Dashboard**.
+## Create the VM
 
 ### 1. Download Ubuntu Server
-Go to the following link and download the Ubuntu Server ISO image:
-https://ubuntu.com/download/server
-![step1](../Docs/Linux-1.png)
 
-### 2. Create a New Virtual Machine
-Open **VMware**, then go to:
+Download the Ubuntu Server ISO from the [official Ubuntu website](https://ubuntu.com/download/server).
+
+![Ubuntu Server download](../Docs/Linux-1.png)
+
+### 2. Start the VMware Wizard
+
+Open VMware Workstation and select:
+
 **File > New Virtual Machine**
 
-### 3. Initial Setup
-The virtual machine creation wizard will open.  
-The layout may look slightly different depending on the VMware version you are using, but the process is basically the same.
+Choose **Typical (recommended)** and continue.
 
-### 4. Choose the Configuration Type
-Select the option:
-**Typical (recommended)**
-Then click **Next**.
+![VMware configuration type](../Docs/Linux-2.png)
 
-![step4](../Docs/Linux-2.png)
+### 3. Select the ISO
 
-### 5. Select the ISO Image
-In the next section, select:
-**Installer disc image file (ISO)**
-Then browse and choose the Ubuntu Server ISO file you downloaded earlier.
-![step5](../Docs/Linux-3.png)
+Choose **Installer disc image file (ISO)** and select the Ubuntu Server ISO.
 
-### 6. Name the Virtual Machine
-Assign a name to the virtual machine. For example:
-`Wazuh_Lab`
+![Ubuntu ISO selection](../Docs/Linux-3.png)
 
-![step6](../Docs/Linux-4.png)
+### 4. Name the Virtual Machine
 
-### 7. Configure Disk Size
-In this section, configure the virtual disk size.
-- **Recommended:** 80 GB  
-- **Minimum recommended:** 50 GB  
-For this lab, **80 GB is recommended** to have enough space for logs, packages, and future testing.
+Use a clear lab name, for example:
 
-Also, select the option:
-**Store virtual disk as a single file**
+`Wazuh-Server`
 
-![step7](../Docs/Linux-8.png)
+![Virtual machine name](../Docs/Linux-4.png)
 
-### 8. Configure Hardware Resources
-Before finishing, adjust the hardware settings, especially the RAM.
-- **Recommended RAM:** 12 GB  
-- **Minimum recommended RAM:** 8 GB  
+### 5. Configure the Disk
 
-For example, in this lab you can assign **10 GB of RAM** if your physical machine supports it.
-![setp8_2](../Docs/Linux-5.png)
-![step8](../Docs/Linux-6.png)
+Assign an **80 GB** virtual disk and select **Store virtual disk as a single file**.
 
-### 9. Finish the Virtual Machine Creation
-Once everything is configured, click **Finish**, and the Vm will star.
+Fifty gigabytes can work for a basic deployment, but additional space is useful once Wazuh starts storing alerts and endpoint data.
 
-### Summary
-At this point, the virtual machine is ready for the Ubuntu Server installation.
+![Virtual disk configuration](../Docs/Linux-8.png)
 
-### Recommended settings for this lab
-- **Operating System:** Ubuntu Server 22.04 LTS
-- **Deployment type:** Wazuh All-in-One
-- **CPU:** 4 vCPU
-- **RAM:** 10 GB to 12 GB
-- **Disk:** 80 GB
+### 6. Configure the Hardware
 
-### Minimum recommended settings
-- **CPU:** 4 vCPU
-- **RAM:** 8 GB
-- **Disk:** 50 GB
+Before finishing, review the hardware settings.
 
-- ---
+| Resource | Recommended | Minimum for this lab |
+|---|---:|---:|
+| CPU | 4 vCPU | 4 vCPU |
+| RAM | 10–12 GB | 8 GB |
+| Disk | 80 GB | 50 GB |
+
+I used **4 vCPU, 10 GB of RAM, and an 80 GB disk**.
+
+![Virtual machine memory](../Docs/Linux-5.png)
+![Virtual machine hardware](../Docs/Linux-6.png)
+
+### 7. Finish the Setup
+
+Review the settings and select **Finish**. VMware will create the virtual machine and start the Ubuntu installation.
+
+## Expected Result
+
+The VM should boot from the Ubuntu Server ISO and display the installation menu.
+
+---
 
 <p align="center">
   <strong>Lab Navigation</strong>
 </p>
 
 <p align="center">
-  <a href="02-install-vmware.md">⬅️ Previous Step: Install VMware Workstation</a>
+  <a href="02-install-vmware.md">⬅️ Previous: Install VMware Workstation</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="04-VM-Ubuntu-Configuration.md">Next Step: Ubuntu VM Configuration ➡️</a>
+  <a href="04-VM-Ubuntu-Configuration.md">Next: Install Ubuntu Server ➡️</a>
 </p>
