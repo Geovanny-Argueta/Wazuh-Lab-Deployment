@@ -31,7 +31,7 @@ In this lab, the Wazuh server uses the IP address `192.168.10.128`.
 From a terminal on the **host machine**, connect using the lab administrator account:
 
 ```bash
-ssh <ADMIN_USER>@<WAZUH_SERVER_IP>
+ssh geovanny-admin@192.168.10.128
 ```
 
 Confirm the host fingerprint the first time you connect, then enter the Ubuntu account password.
@@ -84,7 +84,7 @@ sudo systemctl start wazuh-manager
 From the host browser, open:
 
 ```text
-https://<WAZUH_SERVER_IP>
+https://192.168.10.128
 ```
 
 A browser warning is expected because the lab uses a self-signed certificate. Confirm that the address belongs to your Wazuh server before continuing.
