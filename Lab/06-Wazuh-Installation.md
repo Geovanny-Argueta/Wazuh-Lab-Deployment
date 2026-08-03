@@ -22,11 +22,9 @@ On the **Wazuh Ubuntu Server**, run:
 ip addr
 ```
 
-Identify the address assigned to the interface that your host and monitored endpoints can reach.
+In this lab, the Wazuh server uses the IP address `192.168.10.128`.
 
 ![Wazuh server IP address](../Docs/Wazuh-Instalation/step-1.png)
-
-In the examples below, replace `<WAZUH_SERVER_IP>` with that address.
 
 ### 2. Connect Through SSH
 
@@ -55,9 +53,9 @@ The process can take several minutes because it installs and configures all thre
 
 ### 4. Save the Dashboard Credentials Securely
 
-At the end of the installation, the assistant displays the Dashboard username and password.
+At the end of the installation, the assistant displays the Dashboard username and password. I kept this output as part of the lab evidence because it confirms that the installation completed successfully.
 
-Store them in a password manager or another secure location. Do not include the output in screenshots, terminal recordings, or public documentation.
+![Wazuh installation credentials](../Docs/Wazuh-Instalation/step-5.png)
 
 ### 5. Verify the Services
 
@@ -108,9 +106,10 @@ If the original output was not saved, run this command from the directory that c
 sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
 ```
 
-This command prints several credentials to the terminal. Run it privately, save only what you need, and clear the terminal before taking screenshots.
+This command displays the credentials generated during the installation. For the Dashboard, use the entry labeled `Admin user for the web user interface and Wazuh indexer`.
 
-If credentials from this lab have ever appeared publicly, rotate them before reusing the environment.
+![Recovered Wazuh credentials](../Docs/Wazuh-Instalation/step-10.2.png)
+![Wazuh administrator credentials](../Docs/Wazuh-Instalation/step-10.png)
 
 ## Expected Result
 
