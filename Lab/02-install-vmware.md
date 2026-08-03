@@ -1,37 +1,45 @@
 # Install VMware Workstation
 
 ## Objective
-The objective of this step is to install VMware Workstation on the host machine to prepare the virtualization environment for the Wazuh lab.
 
-VMware Workstation will be used to create and run the virtual machines required for the project, starting with the Ubuntu server where Wazuh will be installed.
+VMware Workstation is the virtualization platform I use to run the Wazuh server, Windows endpoint, and Kali Linux on the same computer. This step prepares the host before creating any of the lab machines.
 
 ## Installation Steps
-1. Download the VMware Workstation installer from the official website:
-Here is the link, but first you need to create an account in BROADCOM:
-https://support.broadcom.com/
 
-2. Once you create the account and sign in, go to the following sections: enter My Downloads, then click the option Free Software Downloads Available HERE.
-![Step 2](../Docs/VMWare-1.png)
+1. Go to the [Broadcom Support Portal](https://support.broadcom.com/) and sign in. A Broadcom account may be required before the installer becomes available.
 
-3. After that, scroll down and select VMware Workstation Pro, then choose VMware Workstation Pro 17.0 for Windows, or if you use Linux, choose Linux,  and select a version that is not the newest one.
-![Step_3](../Docs/VMWare-2.png)
-![Step_3.2](../Docs/VMWare-3.png)
+2. Open **My Downloads** and select **Free Software Downloads Available Here**.
 
-4. Finally, click Download, If a form appears when you click download, just fill it out and click accept or save (I don’t remember exactly which one). After that, it will take you back to the same page, and you can simply click download again
-![Step_4](../Docs/VMWare-4.png)
+   ![Broadcom downloads page](../Docs/VMWare-1.png)
 
-5. Locate the installer file on the host machine.
-6. Right-click the installer and select **Run as administrator**.
-7. Click **Next** to begin the installation.
-8. Accept the license agreement.
-9. Select the option: **Add VMWare Wrokstation Console Tools into system PATH**
-![Step_10](../Docs/VMWare-5.png)
+3. Search for **VMware Workstation Pro** and choose the installer for your host operating system.
 
-10. Continue with the default settings.
-11. Click **Install** to start the installation process.
-12. Click **Finish** when the setup is done.
-13. Restart the host machine if required.
-14. Open VMware Workstation and confirm it starts correctly.
+   ![VMware Workstation product page](../Docs/VMWare-2.png)
+   ![VMware Workstation version selection](../Docs/VMWare-3.png)
+
+4. Complete the download form if Broadcom displays one, then download the installer.
+
+   ![VMware Workstation download](../Docs/VMWare-4.png)
+
+5. Locate the installer, right-click it, and select **Run as administrator**.
+
+6. Accept the license agreement and continue through the setup wizard.
+
+7. When the optional features appear, enable:
+
+   **Add VMware Workstation console tools into the system PATH**
+
+   ![VMware installation options](../Docs/VMWare-5.png)
+
+8. Keep the remaining settings at their defaults unless your computer requires something different.
+
+9. Select **Install**, wait for the process to finish, and restart the host if prompted.
+
+10. Open VMware Workstation and confirm that the application starts normally.
+
+## Expected Result
+
+VMware Workstation should open without errors and be ready to create the first virtual machine.
 
 ---
 
@@ -40,7 +48,7 @@ https://support.broadcom.com/
 </p>
 
 <p align="center">
-  <a href="01-Lab_Overview.md">⬅️ Previous Step: Lab Overview</a>
+  <a href="01-Lab_Overview.md">⬅️ Previous: Lab Overview</a>
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="03-Create-Ubuntu-VM.md">Next Step: Create Ubuntu Virtual Machine ➡️</a>
+  <a href="03-Create-Ubuntu-VM.md">Next: Create Ubuntu Virtual Machine ➡️</a>
 </p>
