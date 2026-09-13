@@ -1,44 +1,40 @@
 # Wazuh Lab Deployment
 
-A documented security monitoring lab built in VMware Workstation. The project shows how I prepared an isolated environment, installed Wazuh on Ubuntu Server, enrolled a Windows Server 2022 endpoint, and prepared Kali Linux for controlled testing.
+## Overview
 
-## What is documented
+This repository documents the Wazuh lab I built in VMware Workstation. I started this project to move beyond theory and create a small SOC environment where I can collect logs, generate security events, test detections, and investigate alerts.
 
-| Component | Role | Evidence |
-|---|---|---|
-| Ubuntu Server | Wazuh Manager, Indexer, and Dashboard | Installation steps and service checks |
-| Windows Server 2022 | Monitored endpoint | Agent installation and active status check |
-| Kali Linux | Controlled test machine | VM import and network setup |
-| VMware Workstation | Virtual lab platform | VM and network configuration |
+The lab is still growing. This repository covers the infrastructure and deployment process, while the next phase will focus on Detection Engineering and practical SIEM use cases.
 
-This repository covers **deployment and connectivity**. Detection rules, attack simulations, and incident investigations are future work; they are not presented here as completed results.
+## Lab Environment
 
-## Read the lab
+| System | Purpose |
+|---|---|
+| **Ubuntu Server** | Hosts the Wazuh Manager, Indexer, and Dashboard |
+| **Windows Server 2022** | First monitored endpoint with the Wazuh Agent |
+| **Kali Linux** | Generates controlled activity for detection testing |
+| **VMware Workstation** | Runs and isolates the virtual machines |
 
-Follow the guides in order:
+## What This Project Covers
 
-1. [Lab overview](Lab/01-Lab_Overview.md)
-2. [Install VMware Workstation](Lab/02-install-vmware.md)
-3. [Create the Ubuntu VM](Lab/03-Create-Ubuntu-VM.md)
-4. [Install Ubuntu Server](Lab/04-VM-Ubuntu-Configuration.md)
-5. [Configure the lab networks](Lab/05-Configuration-Ubuntu-Before-Install-Wazuh.md)
-6. [Install Wazuh All-in-One](Lab/06-Wazuh-Installation.md)
-7. [Install Windows Server 2022](Lab/07-Windows_Server_2022.md)
-8. [Install the Wazuh Agent](Lab/08-Installing-the-Wazuh-Agent-on-Windows-Server.md)
-9. [Install Kali Linux](Lab/09-Install-Kali-Linux.md)
+- Building an isolated virtual lab
+- Deploying Wazuh All-in-One
+- Connecting a Windows endpoint to Wazuh
+- Preparing Kali Linux for controlled security testing
+- Verifying that agents and Wazuh services are working
+- Creating a foundation for future detection and investigation use cases
 
-## Validation points
+## Lab Documentation
 
-The guides show how to check that the three Wazuh services are running, that the Dashboard is reachable, and that the Windows agent appears as **Active**. Kali Linux is prepared for subsequent controlled tests on the isolated lab network. Screenshots support the deployment steps; they are not a substitute for reproducing the checks in a new environment.
+The deployment is documented step by step, including screenshots and validation checks.
 
-## Next phase
+[Start the Lab Documentation](Lab/01-Lab_Overview.md)
 
-I plan to add endpoint telemetry, a first detection with test events, alert evidence, investigation notes, and a concise incident report. Each future case study will distinguish the test procedure from the observed result.
+## Next Phase
 
-## Security note
-
-The IP addresses and commands in the guides are lab examples. Generate your own credentials, keep installer password archives private, and never commit passwords or screenshots containing them. Restrict testing to systems you own or are authorized to assess.
+The next phase will add Windows and Linux telemetry, custom Wazuh rules, MITRE ATT&CK mapping, Active Response, dashboards, and incident reports. Each detection will be tested in the lab before it is documented.
 
 ## Author
 
-**Geovanny Argueta** — SOC Analyst Level 2
+**Geovanny Argueta**  
+Cybersecurity Portfolio Project
