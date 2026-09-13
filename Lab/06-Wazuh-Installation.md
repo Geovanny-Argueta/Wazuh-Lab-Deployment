@@ -53,7 +53,9 @@ The process can take several minutes because it installs and configures all thre
 
 ### 4. Save the Dashboard Credentials Securely
 
-The installer displays generated credentials when setup finishes. Store them in a password manager and do not include them in screenshots, commits, or shared logs. The installation completion message is sufficient evidence that this step succeeded.
+At the end of the installation, the assistant displays the Dashboard username and password. I kept this output as part of the lab evidence because it confirms that the installation completed successfully.
+
+![Wazuh installation credentials](../Docs/Wazuh-Instalation/step-5.png)
 
 ### 5. Verify the Services
 
@@ -98,7 +100,16 @@ Use the Dashboard credentials generated during installation.
 
 ### 8. Recover the Generated Credentials if Needed
 
-If the original output was not saved, follow the [Wazuh installation guide](https://documentation.wazuh.com/current/installation-guide/wazuh-indexer/installation-assistant.html) to recover the generated passwords from `wazuh-install-files.tar` on the lab server. Keep the archive and its contents private. Do not paste password output into a public terminal recording, screenshot, issue, or repository.
+If the original output was not saved, run this command from the directory that contains `wazuh-install-files.tar`:
+
+```bash
+sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
+```
+
+This command displays the credentials generated during the installation. For the Dashboard, use the entry labeled `Admin user for the web user interface and Wazuh indexer`.
+
+![Recovered Wazuh credentials](../Docs/Wazuh-Instalation/step-10.2.png)
+![Wazuh administrator credentials](../Docs/Wazuh-Instalation/step-10.png)
 
 ## Expected Result
 
